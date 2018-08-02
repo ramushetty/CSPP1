@@ -8,11 +8,11 @@ def main():
 	#s = raw_input()
 	# the input string is in s
 	# remove pass and start your code here
-    s= str(input("enter string") )
-    c= 0
+    s = input("enter string") 
+    c = 0
     for i in range (0, len(s), 1):
-        if s[i]== 'a'or s[i]== 'e'or s[i]== 'i'or s[i]== 'o'or s[i]== 'u':
-            c= c+1
+        if s[i] == 'a'or s[i] == 'e'or s[i] == 'i'or s[i] == 'o'or s[i] == 'u':
+            c = c+1
     print(c)
 
 if __name__== "__main__":
