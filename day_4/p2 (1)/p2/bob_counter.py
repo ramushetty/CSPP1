@@ -26,7 +26,6 @@ def main():
                 j_a = 0
                 m_a += 1
                 c_a = 0
-                i-=1
                 continue
             c_a += 1
             j_a += 1
