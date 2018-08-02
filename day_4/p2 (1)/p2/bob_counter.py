@@ -29,8 +29,7 @@ def main():
                 continue
             c_a += 1
             j_a += 1
-        
-    print(m_a)
+     print(m_a)
 
 if __name__ == "__main__":
     main()
