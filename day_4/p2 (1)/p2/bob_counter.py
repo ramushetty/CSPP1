@@ -20,7 +20,7 @@ def main():
     c_a = 0
     m_a = 0
     j_a = 0
-    for i in range(0, lal-1, 1):
+    for i in range(0, lal, 1):
         while  string2[j_a] == string1[i]:
             if c_a == len(string2)-1:
                 j_a = 0
