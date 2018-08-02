@@ -15,23 +15,25 @@ If you've spent more than a few hours on this problem, we suggest that you move 
 If you have time, come back to this problem after you've had a break and cleared your head.'''
 
 def main():
+    '''
+    '''
     #s = raw_input()
     # the input string is in s
     # remove pass and start your code here
-    s=input()
-    k=0
-    st=""
-    for i in range(0,len(s)-1,1):
-        if i==len(s):
+    s_s = input()
+    k_k = 0
+    s_t = ""
+    for i in range(0, len(s_s)-1, 1):
+        if i == len(s_s):
             break
-        if s[i] <= s[i+1]:
-            st=st+s[i]
-            if len(st)>k:
-                k=len(st)
-                out=st+s[i+1]
+        if s_s[i] <= s_s[i+1]:
+            s_t = s_t+s_s[i]
+            if len(s_t)>k_k:
+                k_k = len(s_t)
+                out = s_t+s_s[i+1]
         else:  
-            st=""          
+            s_t = ""          
     print(out)
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
