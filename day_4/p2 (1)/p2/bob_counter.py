@@ -9,23 +9,23 @@ def main():
     # the input string is in s
     # remove pass and start your code here
     string1 = input()
-string2 = str("bob")
-l = len(string1)
-print(l)
-c = 0
-m = 0
-j = 0
-for i in range(0, l-1, 1):
-    while  string2[j] == string1[i]:
-        if c == len(string2)-1:
-            j = 0
-            m+= 1
-            c = 0
-            continue
-        c+= 1
-        j+= 1
+    string2 = str("bob")
+    la = len(string1)
+    print(la)
+    c = 0
+    m = 0
+    j = 0
+    for i in range(0, la-1, 1):
+        while  string2[j] == string1[i]:
+            if c == len(string2)-1:
+                j = 0
+                m+= 1
+                c = 0
+                continue
+            c+= 1
+            j+= 1
         
-print(m)
+    print(m)
 
 if __name__== "__main__":
     main()
