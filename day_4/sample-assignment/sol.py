@@ -5,6 +5,9 @@
 # This function takes in one number and returns one number.
 
 def main():
+	'''
+	addition of string
+	'''
     data = input()
     print(int(data[0])+int(data[1]))
 
