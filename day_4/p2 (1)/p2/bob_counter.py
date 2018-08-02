@@ -5,27 +5,30 @@ Write a program that prints the number of times the string 'bob' occurs in s. Fo
 Number of times bob occurs is: 2'''
 
 def main():
+    '''
+    to count number of times bob comes in a string
+    '''
     #s = raw_input()
     # the input string is in s
     # remove pass and start your code here
     string1 = input()
     string2 = str("bob")
-    la = len(string1)
+    lal = len(string1)
     #print(la)
-    ca = 0
-    ma = 0
-    ja = 0
-    for i in range(0, la-1, 1):
-        while  string2[ja] == string1[i]:
-            if ca == len(string2)-1:
-                ja = 0
-                ma+= 1
-                ca = 0
+    c_a = 0
+    m_a = 0
+    j_a = 0
+    for i in range(0, lal-1, 1):
+        while  string2[j_a] == string1[i]:
+            if c_a == len(string2)-1:
+                j_a = 0
+                m_a+= 1
+                c_a = 0
                 continue
-            ca+= 1
-            ja+= 1
+            c_a+= 1
+            j_a+= 1
         
-    print(ma)
+    print(m_a)
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
