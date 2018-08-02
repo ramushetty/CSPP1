@@ -1,6 +1,6 @@
 '''Assume s is a string of lower case characters.
 
-Write a program that prints the longest substring of s in which the 
+Write a program that prints the longest substring of s in which the
 letters occur in alphabetical order.
 For example, if s = 'azcbobobegghakl', then your program should print
 
@@ -19,6 +19,7 @@ If you have time, come back to this problem after you've had
 
 def main():
     '''
+    longest substring
     '''
     #s = raw_input()
     # the input string is in s
@@ -34,8 +35,8 @@ def main():
             if len(s_t) > k_k:
                 k_k = len(s_t)
                 out = s_t+s_s[i+1]
-        else:  
-            s_t = ""          
+        else:
+            s_t = ""
     print(out)
 if __name__ == "__main__":
     main()
