@@ -11,7 +11,7 @@ def main():
     string1 = input()
     string2 = str("bob")
     la = len(string1)
-    print(la)
+    #print(la)
     c = 0
     m = 0
     j = 0
