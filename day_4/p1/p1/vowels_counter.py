@@ -7,6 +7,9 @@
 #Number of vowels: 5
 
 def main():
+    '''
+    counting vowels
+    '''
     s = input()
     c = 0
     for i in range(0, len(s), 1):
@@ -15,5 +18,4 @@ def main():
     print(c)
 
 if __name__ == "__main__":
-	main()
- 	
+    main()
