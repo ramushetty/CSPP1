@@ -12,20 +12,20 @@ def main():
     string2 = str("bob")
     la = len(string1)
     #print(la)
-    c = 0
-    m = 0
-    j = 0
+    ca = 0
+    ma = 0
+    ja = 0
     for i in range(0, la-1, 1):
-        while  string2[j] == string1[i]:
-            if c == len(string2)-1:
-                j = 0
-                m+= 1
-                c = 0
+        while  string2[ja] == string1[i]:
+            if ca == len(string2)-1:
+                ja = 0
+                ma+= 1
+                ca = 0
                 continue
-            c+= 1
-            j+= 1
+            ca+= 1
+            ja+= 1
         
-    print(m)
+    print(ma)
 
 if __name__== "__main__":
     main()
