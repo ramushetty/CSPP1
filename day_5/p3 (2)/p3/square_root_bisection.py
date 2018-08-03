@@ -11,13 +11,13 @@
 
 def main():
     '''
-    bisection 
+    bisection
     '''
     s_s = int(input())
     # epsilon and step are initialized
     # don't change these values
     epsilon = 0.01
-    step = 0.1
+    #step = 0.1
     # your code starts her
     g_g = 0
     l_l = 0
