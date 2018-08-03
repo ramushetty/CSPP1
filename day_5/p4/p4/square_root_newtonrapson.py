@@ -20,7 +20,7 @@ def main():
     # your code starts here
     k_k = s_s/2.0
     while abs(k_k*k_k - s_s) >= epsilon:
-        k_k = k_k - (((k_k**2) - s_s )/(2*k_k))
+        k_k = k_k - (((k_k**2) - s_s)/(2*k_k))
     print(str(k_k))
 
 if __name__ == "__main__":
