@@ -21,7 +21,7 @@ def main():
     c_c = 0
     while c_c**3 < s_s:
         c_c = c_c+1
-    if c_c**3 != s:
+    if c_c**3 != s_s:
         print(str(s_s)+' is not a perfect cube')
     else:
         print(str(s_s)+' is a perfect cube')
