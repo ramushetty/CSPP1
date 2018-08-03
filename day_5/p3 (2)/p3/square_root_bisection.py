@@ -19,13 +19,11 @@ def main():
     epsilon = 0.01
     #step = 0.1
     # your code starts her
-    g_g = 0
     l_l = 0
     h_h = s_s
     a_a = (h_h+l_l)/2
     while abs(a_a**2-s_s) >= epsilon:
         #print(str(a_a))
-        g_g += 1
         if a_a**2 < s_s:
             l_l = a_a
         else:
