@@ -10,17 +10,17 @@
 # Output: 21950 is not a perfect cube
 
 def main():
-	# input is captured in s
-	s = int(input())
-	# watch out for the data type of value stored in s
-	# your code starts here
-	c_c = 0
-	while c_c**3 < s:
-		c_c = c_c+1
-	if c_c**3 != s:
-		print(str(s)+' is not a perfect cube')
-	else:
-		print(str(s)+' is a perfect cube')
+    # input is captured in s
+    s = int(input())
+    # watch out for the data type of value stored in s
+    # your code starts here
+    c_c = 0
+    while c_c**3 < s:
+        c_c = c_c+1
+    if c_c**3 != s:
+        print(str(s)+' is not a perfect cube')
+    else:
+        print(str(s)+' is a perfect cube')
 
-if __name__== "__main__":
-	main()
+if __name__ == "__main__":
+    main()
