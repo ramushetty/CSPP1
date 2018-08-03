@@ -17,7 +17,7 @@ def main():
     # epsilon and step are initialized
     # don't change these values
     epsilon = 0.01
-    step = 0.1
+    #step = 0.1
     # your code starts here
     i_i = 0.1
     g_g = 0
