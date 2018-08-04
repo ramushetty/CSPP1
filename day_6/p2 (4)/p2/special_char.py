@@ -9,8 +9,8 @@ def main():
     '''
     str_input = input()
     o_o = ''
-
-    for i in range(0, len(str_input)):
+    k_k = len(str_input)
+    for i in range(0, k_k):
         if str_input[i] in '!@#$%^&*':
             o_o += " "
         else:
