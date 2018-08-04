@@ -14,11 +14,10 @@ def main():
     for i_i in range(1, num+1):
         if i_i%3 == 0:
             print("Fizz")
-        elif i_i%5 == 0:
+        if i_i%5 == 0:
             print("Buzz")
-        else:
+        elif i_i>0:
             print(i_i)
-        if i_i == num+1:
-            break
+        
 if __name__ == "__main__":
     main()
