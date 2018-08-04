@@ -17,7 +17,7 @@ def main():
         elif i_i%5 == 0:
             print("Buzz")
         else:
-             print(i_i)
+            print(i_i)
         if i_i == num+1:
             break
 if __name__ == "__main__":
