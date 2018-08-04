@@ -11,7 +11,7 @@ def main():
     num = int(input())
     #c_c = 0
     i_i = 1
-    for i_i in range(1,num+1):
+    for i_i in range(1, num+1):
         if i_i%3 == 0:
             print("Fizz")
         elif i_i%5 == 0:
@@ -20,8 +20,5 @@ def main():
              print(i_i)
         if i_i == num+1:
             break
-
-
-
 if __name__ == "__main__":
     main()
