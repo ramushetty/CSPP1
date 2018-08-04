@@ -10,22 +10,19 @@ def main():
     '''
     int_input =(int(input()))
     pro = 1
-    if int_input <= 0:
+    if int_input == 0:
+        print(0)
+    elif int_input <= 0:
         k = abs(int_input)
-        print(k)
         while k != 0:
-            l = k%10
-            pro = pro*l
+            l_l = k%10
+            pro = pro*l_l
             k = k // 10
         print(-pro)
-
-
-    
-
     else:
         while int_input != 0:
-            l = int_input%10
-            pro = pro*l
+            l_l = int_input%10
+            pro = pro*l_l
             int_input = int_input // 10
         print(pro)
 if __name__ == "__main__":
