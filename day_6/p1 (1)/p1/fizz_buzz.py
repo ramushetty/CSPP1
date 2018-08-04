@@ -12,15 +12,13 @@ def main():
     c_c = 0
     i_i = 1
 
-    while c_c != num:
+    for i_i in range(1,num+1):
         if i_i%3 == 0:
             print("Fizz")
         elif i_i%5 == 0:
             print("Buzz")
         else:
             print(i_i)
-        i_i = i_i + 1
-        c_c = c_c + 1
         if i_i == num+1:
             break
 
