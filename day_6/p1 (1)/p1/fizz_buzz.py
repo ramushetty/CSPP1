@@ -12,7 +12,7 @@ def main():
     #c_c = 0
     i_i = 1
     for i_i in range(1, num+1):
-        if i_i%3 == 0 and i_i%5 == 0 :
+        if i_i%3 == 0 and i_i%5 == 0:
             print("Fizz")
             print("Buzz")
         elif i_i%3 == 0:
