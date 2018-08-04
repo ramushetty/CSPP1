@@ -10,7 +10,7 @@ def main():
     '''
     num = int(input())
     c_c = 0
-    i_i= 1
+    i_i = 1
 
     while c_c <= num:
         if i_i%3 == 0:
