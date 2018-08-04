@@ -12,7 +12,7 @@ def main():
     c_c = 0
     i_i = 1
 
-    while c_c <= num:
+    while c_c != num:
         if i_i%3 == 0:
             print("Fizz")
         elif i_i%5 == 0:
