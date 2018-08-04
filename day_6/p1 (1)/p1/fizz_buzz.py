@@ -9,23 +9,20 @@ def main():
     Read number from the input, store it in variable num.
     '''
     num = int(input())
-    c=0
-    i=1
+    c_c = 0
+    i_i= 1
 
-    while c<=num:
-        if i%3==0:
+    while c_c <= num:
+        if i_i%3 == 0:
             print("Fizz")
-
-
-        
-        elif i%5==0:
+        elif i_i%5 == 0:
             print("Buzz")
         else:
-            print(i)
-        
-        
-        i=i+1
-        c=c+1
+            print(i_i)
+        i_i = i_i + 1
+        c_c = c_c + 1
+        if i_i == num+1:
+            break
 
 
 
