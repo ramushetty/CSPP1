@@ -29,7 +29,7 @@ at the end of the year in the format:
 # Updated balance each month = (Monthly unpaid balance) +
 (Monthly interest rate x Monthly unpaid balance)
 '''
-def _p_aying_Debt_Off_InAYear(balance, a_i_r, m_p_r):
+def _paying_Debt_Off_InA_Year_(balance, a_i_r, m_p_r):
     '''
     return balance remaining
     '''
@@ -40,11 +40,13 @@ def _p_aying_Debt_Off_InAYear(balance, a_i_r, m_p_r):
         balance = monthly_unpaid_balance + (monthly_interest_rate * monthly_unpaid_balance)
     return 'Remaining balance: '+str(round(balance, 2))
 def main():
+    '''
+    calling function
+    '''
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print(_p_aying_Debt_Off_InAYear(data[0], data[1], data[2]))
-
+    print(_paying_Debt_Off_InA_Year_(data[0], data[1], data[2]))
 if __name__ == "__main__":
     main()
 
