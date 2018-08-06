@@ -29,13 +29,13 @@ at the end of the year in the format:
 # Updated balance each month = (Monthly unpaid balance) +
 (Monthly interest rate x Monthly unpaid balance)
 '''
-def paying_Debt_Off_InAYear(balance, _annual_Interest_Rate, monthly_Payment_Rate):
+def _p_aying_Debt_Off_InAYear(balance, _a_nnual_Interest_Rate, _m_onthly_Payment_Rate):
     '''
     return balance remaining
     '''
     for _ in range(12):
-        monthly_interest_rate = _annual_Interest_Rate / 12.0
-        minimum_monthly_payment = monthly_Payment_Rate*balance
+        monthly_interest_rate = _a_nnual_Interest_Rate / 12.0
+        minimum_monthly_payment = _m_onthly_Payment_Rate*balance
         monthly_unpaid_balance = balance - minimum_monthly_payment
         balance = monthly_unpaid_balance + (monthly_interest_rate * monthly_unpaid_balance)
     return 'Remaining balance: '+str(round(balance, 2))
@@ -43,7 +43,7 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print(paying_Debt_Off_InAYear(data[0], data[1], data[2]))
+    print(_p_aying_Debt_Off_InAYear(data[0], data[1], data[2]))
 
 if __name__ == "__main__":
     main()
