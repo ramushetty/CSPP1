@@ -55,3 +55,4 @@ def main():
     print(payingdebtoffinayear(data[0], data[1]))
 if __name__ == "__main__":
     main()
+    
