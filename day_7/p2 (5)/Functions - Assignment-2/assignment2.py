@@ -29,29 +29,29 @@ math is found below:
 (Monthly interest rate x Monthly unpaid balance)
 '''
 def payingDebtOffInAYear(balance, annual_interest_rate):
-	'''
-	compound interest
-	'''
-	b_l = balance
-	minfixed_monthly_payment = 10
-	monthly_interest_rate = annual_interest_rate/12
-	monthly_unpaid_balance = balance
-	while balance > 0:
-		balance = b_l
-		month = 0
-		while month < 12:
-			monthly_unpaid_balance = balance - minfixed_monthly_payment
-			balance = monthly_unpaid_balance + (monthly_interest_rate * monthly_unpaid_balance)
-			month = month + 1
-		minfixed_monthly_payment = minfixed_monthly_payment + 10
-	return 'Lowest Payment: '+str(minfixed_monthly_payment-10) 
+    '''
+    compound interest
+    '''
+    b_l = balance
+    minfixed_monthly_payment = 10
+    monthly_interest_rate = annual_interest_rate/12
+    monthly_unpaid_balance = balance
+    while balance > 0:
+        balance = b_l
+        month = 0
+        while month < 12:
+            monthly_unpaid_balance = balance - minfixed_monthly_payment
+            balance = monthly_unpaid_balance + (monthly_interest_rate * monthly_unpaid_balance)
+            month = month + 1
+        minfixed_monthly_payment = minfixed_monthly_payment + 10
+    return 'Lowest Payment: '+str(minfixed_monthly_payment-10)
 def main():
-	'''
-	calling function
-	'''
-	data = input()
-	data = data.split(' ')
-	data = list(map(float, data))
-	print(payingDebtOffInAYear(data[0],data[1]))
+    '''
+    calling function
+    '''
+    data = input()
+    data = data.split(' ')
+    data = list(map(float, data))
+    print(payingDebtOffInAYear(data[0],data[1]))
 if __name__ == "__main__":
-	main()
+    main()
