@@ -6,7 +6,7 @@
 
 
 def evalQuadratic(a, b, c, x):
-	print(a)
+	#print(a)
 	return a*x*x+b*x+c
     
 
