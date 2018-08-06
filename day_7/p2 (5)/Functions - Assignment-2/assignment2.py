@@ -28,7 +28,7 @@ math is found below:
 # Updated balance each month = (Monthly unpaid balance) +
 (Monthly interest rate x Monthly unpaid balance)
 '''
-def payingdebtOffinAYear(balance, annual_interest_rate):
+def payingdebtoffinayear(balance, annual_interest_rate):
     '''
     compound interest
     '''
@@ -52,6 +52,6 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print(payingdebtOffinAYear(data[0], data[1]))
+    print(payingdebtoffinayear(data[0], data[1]))
 if __name__ == "__main__":
     main()
