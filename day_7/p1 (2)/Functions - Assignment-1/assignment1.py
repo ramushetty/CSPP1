@@ -29,7 +29,7 @@ at the end of the year in the format:
 # Updated balance each month = (Monthly unpaid balance) +
 (Monthly interest rate x Monthly unpaid balance)
 '''
-def p_D_O_I_Y(balance, a_i_r, m_p_r):
+def p_p(balance, a_i_r, m_p_r):
     '''
     return balance remaining
     '''
@@ -46,7 +46,7 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print(p_D_O_I_Y(data[0], data[1], data[2]))
+    print(p_p(data[0], data[1], data[2]))
 if __name__ == "__main__":
     main()
 
