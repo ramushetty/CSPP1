@@ -44,7 +44,7 @@ def payingDebtOffInAYear(balance, annual_interest_rate):
 			balance = monthly_unpaid_balance + (monthly_interest_rate * monthly_unpaid_balance)
 			month = month + 1
 		minfixed_monthly_payment = minfixed_monthly_payment + 10
-	return minfixed_monthly_payment-10 
+	return 'Lowest Payment: '+str(minfixed_monthly_payment-10) 
 def main():
 	'''
 	calling function
