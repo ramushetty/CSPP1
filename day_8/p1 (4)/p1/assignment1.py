@@ -18,7 +18,7 @@ def factorial(_n_n):
         return 1
     return _n_n*factorial(_n_n-1)
 def main():
-    '''
+    '''s
     factorial
     '''
     a_a = input()
