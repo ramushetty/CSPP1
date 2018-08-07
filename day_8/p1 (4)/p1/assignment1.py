@@ -22,6 +22,6 @@ def main():
     factorial
     '''
     a_a = input()
-    print(factorial(int(a_a)))    
+    print(factorial(int(a_a)))
 if __name__ == "__main__":
     main()
