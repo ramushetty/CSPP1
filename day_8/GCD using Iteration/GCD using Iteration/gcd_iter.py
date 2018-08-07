@@ -5,30 +5,26 @@
 # This function takes in two numbers and returns one number.
 
 
-def gcdIter(a, b):
+def gcdIter(a_a, b_b):
     '''
     a, b: positive integers
     
     returns: a positive integer, the greatest common divisor of a & b.
     '''
     # Your code here
-    i=1
-    k_k = 0
-    while i<=a:
-        if a<=b:
-           if a%i==0 and b%i==0:
-                c_c = a
-        i=i+1
-    return c_c
+    for i_i in range(1, max(a_a, b_b)+1):
+
+        if a_a%i_i == 0 and b_b%i_i == 0:
+            n_n=i_i
+
+    return n_n
 def main():
     '''
-    gcd ofa number
+    gcd ofa numberS
     '''
     data = input()
     data = data.split()
     print(gcdIter(int(data[0]),int(data[1]))) 
 
 if __name__ == "__main__":
-    import sys
-    sys.setrecursionlimit(25500)
     main()
