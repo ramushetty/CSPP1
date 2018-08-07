@@ -16,13 +16,13 @@ def factorial(n):
     if n==1:
     	return 1
     else:
-    	return n*factorial(n-1)
-    
-
-
+    	return str(n*factorial(n-1))
 def main():
+	'''
+	factorial
+	'''
     a = input()
     print(factorial(int(a)))    
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
