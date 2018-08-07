@@ -15,7 +15,7 @@ def factorial(n_n):
     if n_n == 0:
         return 1
     if n_n == 1:
-        return n_n
+        return 1
     return n_n*factorial(n_n-1)
 def main():
     '''
@@ -25,5 +25,5 @@ def main():
     print(factorial(int(a_a)))
 if __name__ == "__main__":
     import sys
-    sys.setrecursionlimit(25500)
+    sys.setrecursionlimit(2550000)
     main()
