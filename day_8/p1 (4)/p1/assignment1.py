@@ -15,7 +15,7 @@ def factorial(n_n):
     if n_n == 0:
         return 1
     if n_n == 1:
-        return 1
+        return n_n
     return n_n*factorial(n_n-1)
 def main():
     '''
