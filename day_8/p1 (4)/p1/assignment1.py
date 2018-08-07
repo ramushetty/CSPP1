@@ -25,5 +25,5 @@ def main():
     print(factorial(int(a_a)))
 if __name__ == "__main__":
     import sys
-    sys.setrecursionlimit(2550000)
+    sys.setrecursionlimit(255000000)
     main()
