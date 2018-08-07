@@ -13,8 +13,7 @@ def sumofdigits(n_n):
     # Your code here
     if n_n == 0:
         return 0
-    else:
-        return (n_n%10+sumofdigits(n_n//10))
+    return n_n%10+sumofdigits(n_n//10)
 def main():
     '''
     sum of digits
@@ -23,4 +22,3 @@ def main():
     print(sumofdigits(int(a_a)))
 if __name__ == "__main__":
     main()
-
