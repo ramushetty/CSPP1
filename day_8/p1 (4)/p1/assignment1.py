@@ -16,14 +16,12 @@ def factorial(n_n):
         return 1
     if n_n == 1:
         return 1
-    else:
-        return n_n*factorial(n_n-1)
+    return n_n*factorial(n_n-1)
 def main():
     '''
     factorial
     '''
-    a = input()
-    print(factorial(int(a)))    
-
+    a_a = input()
+    print(factorial(int(a_a)))    
 if __name__ == "__main__":
     main()
