@@ -7,8 +7,6 @@ def apply_to_each(L, f):
 
 	return list(map(inc,L))
     
-
-
 def main():
     data = input()
     data = data.split()
