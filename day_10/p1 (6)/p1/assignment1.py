@@ -14,15 +14,11 @@ def get_available_letters(letters_guessed):
     '''
     import string
     st = string.ascii_lowercase
-    re = ' '
+    re = ""
     for i in st:
         if i not in letters_guessed:
-            re = re +i
+            re = re+i
     return re
-
-
-
-
 def main():
     '''
     Main function for the given program
