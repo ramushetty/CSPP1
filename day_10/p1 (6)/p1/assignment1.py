@@ -13,12 +13,12 @@ def get_available_letters(letters_guessed):
       yet been guessed.
     '''
     import string
-    st = string.ascii_lowercase
-    re = ""
-    for i in st:
+    s_t = string.ascii_lowercase
+    r_e = ""
+    for i in s_t:
         if i not in letters_guessed:
-            re = re+i
-    return re
+            r_e = r_e+i
+    return r_e
 def main():
     '''
     Main function for the given program
