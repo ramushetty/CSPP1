@@ -120,7 +120,7 @@ def hangman(secretWord):
     mx = len(secretWord)+5
     lettersGuessed=[]
     while mx!=0:
-        print("You have",(len(secretWord)-1), "guesses left.")
+        print("You have",mx, "guesses left.")
         print("Available letters:",getAvailableLetters(lettersGuessed))
         gu=input("please guess a letter :")
         mx = mx-1
@@ -133,14 +133,11 @@ def hangman(secretWord):
             print("oops! not in my word:",getGuessedWord(secretWord,lettersGuessed))
         if isWordGuessed(secretWord, lettersGuessed) is True:
             flag = True
-        lettersGuessed += gu
-        if flag is True:
-            print("good guess: ", getGuessedWord(secretWord, lettersGuessed))
-            print("congratulations, you won!")
-        else:
-            print ("sorry you ran out of guesses . the word was ", secretWord)
-        gu = input()
-
+    if flag is True:
+        print("good guess: ", getGuessedWord(secretWord, lettersGuessed))
+        print("congratulations, you won!")
+    else:
+        print ("sorry you ran out of guesses . the word was ", secretWord)
 
 
  
@@ -152,6 +149,6 @@ def hangman(secretWord):
 # When you've completed your hangman function, uncomment these two lines
 # and run this file to test! (hint: you might want to pick your own
 # secretWord while you're testing)
-secretWord="apple"
-#secretWord = chooseWord(wordlist).lower()
+#secretWord="apple"
+secretWord = chooseWord(wordlist).lower()
 hangman(secretWord)
