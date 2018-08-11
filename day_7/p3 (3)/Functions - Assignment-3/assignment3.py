@@ -37,7 +37,30 @@
 
 
 
-def payingDebtOffInAYear(balance, annualInterestRate):
+def payingDebtOffInAYear(balance, annual_interest_rate):
+	monthly_interest_rate = (annual_interest_rate) / 12.0
+	monthly_payment_lower_value = balance / 12.0
+	monthly_payment_upper_value = (balance * (1 + monthly_interest_rate)**12 ) / 12.0
+	new_balance = balance 
+	epsilon = 0.0001
+	guess_input = (monthly_payment_lower_value + monthly_payment_upper_value) / 2.0
+	while True:
+		month = 1
+		while month <= 12:
+			new_balance = new_balance - guess_input
+			new_balance += (monthly_interest_rate* new_balance)
+			month = month +1
+		if new_balance >0 and new_balance > epsilon:
+			monthly_payment_lower_value = guess_input
+			new_balance = balance
+		elif new_balance < 0 and new_balance < -epsilon:
+			monthly_payment_upper_value = guess_input
+			new_balance = balance
+		else:
+			return round(guess_input, 2)
+		guess_input = (monthly_payment_lower_value + monthly_payment_upper_value) / 2
+
+
 
 
 def main():
