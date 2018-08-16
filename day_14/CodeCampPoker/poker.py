@@ -16,22 +16,22 @@ def is_straight(hand):
     '''
     #print(len(hand))
     #print(hand[1])
-    ls=[]
+    l_s = []
     #print(hand[0][0])
     for j in range(len(hand)):
         if hand[j][0] == "T":
-            ls.append(10)
+            l_s.append(10)
         elif hand[j][0] == "J":
-            ls.append(11)
+            l_s.append(11)
         elif hand[j][0] == "Q":
-            ls.append(12)
+            l_s.append(12)
         elif hand[j][0] == "K":
-            ls.append(13)
+            l_s.append(13)
         elif hand[j][0] == "A":
-            ls.append(14)
+            l_s.append(14)
         else:
-            ls.append(hand[j][0])
-    result = list(map(int, ls))
+            l_s.append(hand[j][0])
+    result = list(map(int, l_s))
     #print(result)
     result.sort()
     #print(result)
@@ -52,10 +52,10 @@ def is_flush(hand):
         Write the code for it and return True if it is a flush else return False
     '''
     #print(hand)
-    coun=0
+    coun = 0
     for j in range(len(hand)-1):
-        if hand[j][1]==hand[0][1]:
-            coun+=1
+        if hand[j][1] == hand[0][1]:
+            coun += 1
     if coun == len(hand)-1:
         return True
     return False
