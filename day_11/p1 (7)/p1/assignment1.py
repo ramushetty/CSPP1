@@ -43,9 +43,6 @@ def get_word_score(word, n):
         s += SCRABBLE_LETTER_VALUES[letter]
         #print(s)
         c +=1
-        #s=s*len(word)
-        #if n == len(word):
-        #    return s+50
         if c==len(word):
             s = s*len(word)
             #print(s)

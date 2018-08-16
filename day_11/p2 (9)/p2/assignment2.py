@@ -24,9 +24,9 @@ def updateHand(hand, word):
     # TO DO ... <-- Remove this comment when you code this function
     updatehand = dict(hand)
     for letter in range(len(word)):
-        if word[letter] in hand.keys():
-            updatehand[word[letter]] = hand[word[letter]]-1
-    re = updatehand
+        if word[letter] in updatehand.keys():
+            updatehand[word[letter]]-=1
+        re = updatehand
     return re
     
 
@@ -42,7 +42,7 @@ def main():
         #print('l :', l)
         #print(adict)
         adict[l[0]] = int(l[1])
-        #print('adict :', adict)b
+        #print('adict :', adict)
         #print()
     data1 = input()
     print(updateHand(adict,data1))
