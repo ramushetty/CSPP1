@@ -30,7 +30,7 @@ def is_straight(hand):
         elif j[0] == "A":
             l_s.append(14)
         else:
-            l_s.append(hand[j][0])
+            l_s.append(j[0])
     result = list(map(int, l_s))
     #print(result)
     result.sort()
