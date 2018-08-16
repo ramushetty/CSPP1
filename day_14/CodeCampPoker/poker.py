@@ -18,16 +18,16 @@ def is_straight(hand):
     #print(hand[1])
     l_s = []
     #print(hand[0][0])
-    for j in range(len(hand)):
-        if hand[j][0] == "T":
+    for j in hand:
+        if j[0] == "T":
             l_s.append(10)
-        elif hand[j][0] == "J":
+        elif j[0] == "J":
             l_s.append(11)
-        elif hand[j][0] == "Q":
+        elif j[0] == "Q":
             l_s.append(12)
-        elif hand[j][0] == "K":
+        elif j[0] == "K":
             l_s.append(13)
-        elif hand[j][0] == "A":
+        elif j[0] == "A":
             l_s.append(14)
         else:
             l_s.append(hand[j][0])
@@ -40,8 +40,6 @@ def is_straight(hand):
         #print(hand)
         return True
     return False
-   
-
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
