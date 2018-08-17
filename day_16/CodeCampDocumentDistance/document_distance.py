@@ -6,8 +6,6 @@ def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
-    #print("1   :",dict1)
-    #print("2   :",dict2)
     import re
     import math
 
@@ -48,7 +46,7 @@ def similarity(dict1, dict2):
     for j in f_f:
         s_a = s_a+ (f_f[j][0]**2)
     n_a = 0
-    for j in f_f:
+    for j in f_f:   
         n_a = n_a + (f_f[j][1]**2)
     denominator = math.sqrt(s_a)*math.sqrt(n_a)
     return  numerator/denominator
