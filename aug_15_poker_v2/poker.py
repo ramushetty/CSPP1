@@ -12,13 +12,23 @@ def main_function(hand):
     set1 = set()
     for value, suite in hand:
         set1.add(lis_t.index(value))
-        print(set1)
+        #print(set1)
     return len(set1)
 def is_fourofkind(hand):
     if main_function(hand) == 2:
-        print(hand)
+        #print(hand)
         return True
     return False
+def is_twopair(hand):
+    if main_function(hand) == 3:
+        return True
+    return False
+def is_onepair(hand):
+    if main_function(hand) == 4:
+        return True
+    return False
+
+
 
 
 def is_straight(hand):
@@ -111,15 +121,15 @@ def hand_rank(hand):
         return 5
     if is_straight(hand):
         return 4
-    return 0
+    #return 0
     #if is_threeofkind(hand):
      #   return 3
-    #if is_twopair(hand):
-    #    return 2
-    #if is_onepair
-     #return      
+    if is_twopair(hand):
+        return 2
+    if is_onepair(hand):
+        return 1    
     #return high_card(hand)
-
+    return 0
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
