@@ -11,48 +11,48 @@ def similarity(dict1, dict2):
     import re
     import math
 
-    d1 = ""
-    d2 = ""
-    d4 = []
-    d5 = []
-    f = {}
-    d1 = dict1
-    d2 = dict2
-    ne1 = re.sub(r'[^a-zA-Z ]', '', d1).lower().strip().split()
-    ne2 = re.sub(r'[^a-zA-Z ]', '', d2).lower().strip().split()
-    loa = load_stopwords("stopwords.txt")
+    d_1 = ""
+    d_2 = ""
+    d_4 = []
+    d_5 = []
+    f_f = {}
+    d_1 = dict1
+    d_2 = dict2
+    ne_1 = re.sub(r'[^a-zA-Z ]', '', d_1).lower().strip().split()
+    ne_2 = re.sub(r'[^a-zA-Z ]', '', d_2).lower().strip().split()
+    lo_a = load_stopwords("stopwords.txt")
     #print(ne1)
     #print(loa)
-    for j in ne1:
-        if j not in loa:
-            d4.append(j)
-    for i in ne2:
-        if i not in loa:
-            d5.append(i)
-    for word in d4:
-        if word  in f:
-           f[word][0] += 1
+    for j in ne_1:
+        if j not in lo_a:
+            d_4.append(j)
+    for i in ne_2:
+        if i not in lo_a:
+            d_5.append(i)
+    for word in d_4:
+        if word  in f_f:
+           f_f[word][0] += 1
         else:
-            f[word] = [1,0]
-    for word in d5:
-        if word in f:
-            f[word][1] += 1
+            f_f[word] = [1,0]
+    for word in d_5:
+        if word in f_f:
+            f_f[word][1] += 1
         else:
-            f[word] = [0,1]
+            f_f[word] = [0,1]
     #print(f)
-    sum = 0
-    for j in f :
-        sum = sum + (f[j][0]*f[j][1])
-    numerator = sum 
-    sa = 0
-    for j in f:
-        sa = sa+ (f[j][0]**2)
-    na = 0
-    for j in f:
-        na = na + (f[j][1]**2)
-    denominator = math.sqrt(sa)*math.sqrt(na)
-    sim=numerator/denominator
-    return sim
+    _sum_ = 0
+    for j in f_f :
+        _sum_ = _sum_ + (f_f[j][0]*f_f[j][1])
+    numerator = _sum_ 
+    s_a = 0
+    for j in f_f:
+        s_a = s_a+ (f_f[j][0]**2)
+    n_a = 0
+    for j in f_f:
+        n_a = n_a + (f_f[j][1]**2)
+    denominator = math.sqrt(s_a)*math.sqrt(n_a)
+    _sim_=numerator/denominator
+    return _sim_
 
            
 
