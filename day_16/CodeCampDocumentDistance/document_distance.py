@@ -33,7 +33,7 @@ def similarity(dict1, dict2):
         if word  in f_f:
            f_f[word][0] += 1
         else:
-            f_f[word] = [1,0]
+            f_f[word] = [1, 0]
     for word in d_5:
         if word in f_f:
             f_f[word][1] += 1
@@ -51,8 +51,7 @@ def similarity(dict1, dict2):
     for j in f_f:
         n_a = n_a + (f_f[j][1]**2)
     denominator = math.sqrt(s_a)*math.sqrt(n_a)
-    _sim_=numerator/denominator
-    return _sim_
+    return  numerator/denominator
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
