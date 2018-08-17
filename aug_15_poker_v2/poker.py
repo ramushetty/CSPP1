@@ -2,7 +2,30 @@
     Write a program to evaluate poker hands and determine the winner
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
+
 '''
+def is_fourofkind(hand):
+    l_s = []
+    for j in hand:
+        if j[0] == "T":
+            l_s.append(10)
+        elif j[0] == "J":
+            l_s.append(11)
+        elif j[0] == "Q":
+            l_s.append(12)
+        elif j[0] == "K":
+            l_s.append(13)
+        elif j[0] == "A":
+            l_s.append(14)
+        else:
+            l_s.append(j[0])
+    result = list(map(int, l_s))
+    result.sort()
+    for i in range(len(result)-1):
+        for i in result:
+            if result[i] == result[i+1]:
+                return True
+    return False
 
 def is_straight(hand):
     '''
@@ -85,12 +108,22 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     #print(hand)
     if is_straight(hand) and is_flush(hand):
-        return 3
+        return 8
+    if is_fourofkind(hand):
+        return 7
+    if is_fullhouse(hand):
+        return 6
     if is_flush(hand):
-        return 2
+        return 5
     if is_straight(hand):
-        return 1
-    return 0
+        return 4
+    if is_threeofkind(hand):
+        return 3
+    if is_twopair(hand):
+        return 2
+    #if is_onepair
+     #return      
+    return high_card(hand)
 
 def poker(hands):
     '''
