@@ -1,13 +1,19 @@
 '''
     Document Distance - A detailed description is given in the PDF
 '''
-import math
 def numerator(f_f):
+    '''
+    returns numerator
+    '''
     _sum_ = 0
     for j in f_f:
         _sum_ = _sum_ + (f_f[j][0]*f_f[j][1])
     return _sum_
 def denominator(f_f):
+    '''
+    returns denominator
+    '''
+    import math
     s_a = 0
     for j in f_f:
         s_a = s_a+ (f_f[j][0]**2)
@@ -21,8 +27,6 @@ def similarity(dict1, dict2):
         Compute the document distance as given in the PDF
     '''
     import re
-    import math
-
     d_1 = ""
     d_2 = ""
     d_4 = []
