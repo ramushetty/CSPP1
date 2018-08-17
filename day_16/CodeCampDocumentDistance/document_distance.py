@@ -1,6 +1,20 @@
 '''
     Document Distance - A detailed description is given in the PDF
 '''
+import math
+def numerator(f_f):
+    _sum_ = 0
+    for j in f_f:
+        _sum_ = _sum_ + (f_f[j][0]*f_f[j][1])
+    return _sum_
+def denominator(f_f):
+    s_a = 0
+    for j in f_f:
+        s_a = s_a+ (f_f[j][0]**2)
+    n_a = 0
+    for j in f_f:
+        n_a = n_a + (f_f[j][1]**2)
+    return math.sqrt(s_a)*math.sqrt(n_a)
 
 def similarity(dict1, dict2):
     '''
@@ -38,18 +52,7 @@ def similarity(dict1, dict2):
         else:
             f_f[word] = [0, 1]
     #print(f)
-    _sum_ = 0
-    for j in f_f:
-        _sum_ = _sum_ + (f_f[j][0]*f_f[j][1])
-    numerator = _sum_
-    s_a = 0
-    for j in f_f:
-        s_a = s_a+ (f_f[j][0]**2)
-    n_a = 0
-    for j in f_f:
-        n_a = n_a + (f_f[j][1]**2)
-    denominator = math.sqrt(s_a)*math.sqrt(n_a)
-    return  numerator/denominator
+    return  numerator(f_f)/denominator(f_f)
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
