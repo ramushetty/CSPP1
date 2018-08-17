@@ -38,10 +38,10 @@ def similarity(dict1, dict2):
         if word in f_f:
             f_f[word][1] += 1
         else:
-            f_f[word] = [0,1]
+            f_f[word] = [0, 1]
     #print(f)
     _sum_ = 0
-    for j in f_f :
+    for j in f_f:
         _sum_ = _sum_ + (f_f[j][0]*f_f[j][1])
     numerator = _sum_ 
     s_a = 0
