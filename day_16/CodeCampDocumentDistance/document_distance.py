@@ -37,7 +37,7 @@ def similarity(dict1, dict2):
     ne_1 = re.sub(r'[^a-zA-Z ]', '', d_1).lower().strip().split()
     ne_2 = re.sub(r'[^a-zA-Z ]', '', d_2).lower().strip().split()
     lo_a = load_stopwords("stopwords.txt")
-    print(ne_1)
+    #print(ne_1)
     #print(ne1)
     #print(loa)
     for j in ne_1:
