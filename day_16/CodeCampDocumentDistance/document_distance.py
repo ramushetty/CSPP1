@@ -56,7 +56,7 @@ def similarity(dict1, dict2):
             fun_dic[word][1] += 1
         else:
             fun_dic[word] = [0, 1]
-    #print(f)
+    #print(fun_dic)
     return  numerator(fun_dic)/denominator(fun_dic)
 def load_stopwords(filename):
     '''
