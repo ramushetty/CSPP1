@@ -11,15 +11,15 @@ def similarity(dict1, dict2):
     import re
     import math
 
-    d1=""
-    d2=""
-    d4=[]
-    d5=[]
-    f={}
+    d1 = ""
+    d2 = ""
+    d4 = []
+    d5 = []
+    f = {}
     d1 = dict1
     d2 = dict2
-    ne1= re.sub(r'[^a-zA-Z ]', '', d1).lower().strip().split()
-    ne2= re.sub(r'[^a-zA-Z ]', '', d2).lower().strip().split()
+    ne1 = re.sub(r'[^a-zA-Z ]', '', d1).lower().strip().split()
+    ne2 = re.sub(r'[^a-zA-Z ]', '', d2).lower().strip().split()
     loa = load_stopwords("stopwords.txt")
     #print(ne1)
     #print(loa)
@@ -31,22 +31,22 @@ def similarity(dict1, dict2):
             d5.append(i)
     for word in d4:
         if word  in f:
-           f[word][0]+=1
+           f[word][0] += 1
         else:
-            f[word]=[1,0]
+            f[word] = [1,0]
     for word in d5:
         if word in f:
-            f[word][1]+=1
+            f[word][1] += 1
         else:
-            f[word]=[0,1]
+            f[word] = [0,1]
     #print(f)
-    sum =0
+    sum = 0
     for j in f :
-        sum = sum+(f[j][0]*f[j][1])
+        sum = sum + (f[j][0]*f[j][1])
     numerator = sum 
     sa = 0
     for j in f:
-        sa=sa+(f[j][0]**2)
+        sa = sa+ (f[j][0]**2)
     na = 0
     for j in f:
         na = na + (f[j][1]**2)
