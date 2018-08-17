@@ -29,7 +29,7 @@ def similarity(dict1, dict2):
             d_5.append(i)
     for word in d_4:
         if word  in f_f:
-           f_f[word][0] += 1
+            f_f[word][0] += 1
         else:
             f_f[word] = [1, 0]
     for word in d_5:
