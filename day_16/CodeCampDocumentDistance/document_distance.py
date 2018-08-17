@@ -39,7 +39,7 @@ def similarity(dict1, dict2):
             f[word][1]+=1
         else:
             f[word]=[0,1]
-    print(f)
+    #print(f)
     sum =0
     for j in f :
         sum = sum+(f[j][0]*f[j][1])
