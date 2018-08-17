@@ -1,63 +1,63 @@
 '''
     Document Distance - A detailed description is given in the PDF
 '''
-def numerator(f_f):
+def numerator(fun_dic):
     '''
     returns numerator
     '''
     _sum_ = 0
-    for j in f_f:
-        _sum_ = _sum_ + (f_f[j][0]*f_f[j][1])
+    for keys in fun_dic:
+        _sum_ = _sum_ + (fun_dic[keys][0]*fun_dic[keys][1])
     return _sum_
-def denominator(f_f):
+def denominator(fun_dic):
     '''
     returns denominator
     '''
     import math
-    s_a = 0
-    for j in f_f:
-        s_a = s_a+ (f_f[j][0]**2)
-    n_a = 0
-    for j in f_f:
-        n_a = n_a + (f_f[j][1]**2)
-    return math.sqrt(s_a)*math.sqrt(n_a)
+    sum_1 = 0
+    for keys in fun_dic:
+        sum_1 = sum_1+ (fun_dic[keys][0]**2)
+    sum_2 = 0
+    for keys in fun_dic:
+        sum_2 = sum_2 + (fun_dic[keys][1]**2)
+    return math.sqrt(sum_1)*math.sqrt(sum_2)
 
 def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
     import re
-    d_1 = ""
-    d_2 = ""
-    d_4 = []
-    d_5 = []
-    f_f = {}
-    d_1 = dict1
-    d_2 = dict2
-    ne_1 = re.sub(r'[^a-zA-Z ]', '', d_1).lower().strip().split()
-    ne_2 = re.sub(r'[^a-zA-Z ]', '', d_2).lower().strip().split()
-    lo_a = load_stopwords("stopwords.txt")
+    dict_1 = ""
+    dict_2 = ""
+    dict_4 = []
+    dict_5 = []
+    fun_dic = {}
+    dict_1 = dict1
+    dict_2 = dict2
+    new_dict1 = re.sub(r'[^a-zA-Z ]', '', dict_1).lower().strip().split()
+    new_dict2 = re.sub(r'[^a-zA-Z ]', '', dict_2).lower().strip().split()
+    stop_words = load_stopwords("stopwords.txt")
     #print(ne_1)
     #print(ne1)
     #print(loa)
-    for j in ne_1:
-        if j not in lo_a:
-            d_4.append(j)
-    for i in ne_2:
-        if i not in lo_a:
-            d_5.append(i)
-    for word in d_4:
-        if word  in f_f:
-            f_f[word][0] += 1
+    for word in new_dict1:
+        if word not in stop_words:
+            dict_4.append(word)
+    for word in new_dict2:
+        if word not in stop_words:
+            dict_5.append(word)
+    for word in dict_4:
+        if word  in fun_dic:
+            fun_dic[word][0] += 1
         else:
-            f_f[word] = [1, 0]
-    for word in d_5:
-        if word in f_f:
-            f_f[word][1] += 1
+            fun_dic[word] = [1, 0]
+    for word in dict_5:
+        if word in fun_dic:
+            fun_dic[word][1] += 1
         else:
-            f_f[word] = [0, 1]
+            fun_dic[word] = [0, 1]
     #print(f)
-    return  numerator(f_f)/denominator(f_f)
+    return  numerator(fun_dic)/denominator(fun_dic)
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
