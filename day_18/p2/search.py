@@ -38,13 +38,13 @@ def search(search_index, query):
         make a set of doc_id and return
     '''
     dul = search_index
-    lo = query.lower().split()
+    l_o = query.lower().split()
     #print(lo)
-    for i in range(len(lo)-1):
+    for i in range(len(l_o)-1):
         #print(i)
-        if lo[i] in dul:
+        if l_o[i] in dul and :
             #print(lo[i])
-           print(dul[lo[i]])
+           print(dul[l_o[i]])
         else:
             print(set())
 
