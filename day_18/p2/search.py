@@ -44,7 +44,7 @@ def search(search_index, query):
         #print(i)
         if l_o[i] in dul:
         #   print(lo[i])
-             print(dul[lo[i]])
+            print(dul[l_o[i]])
         else:
             print(set())
 
