@@ -39,12 +39,12 @@ def search(search_index, query):
     '''
     dul = search_index
     lo = query.lower().split()
-    print(lo)
+    #print(lo)
     for i in range(len(lo)-1):
-        print(i)
+        #print(i)
         if lo[i] in dul:
-            print(lo[i])
-            print(dul[lo[i]])
+            #print(lo[i])
+           print(dul[lo[i]])
         else:
             print(set())
 
@@ -55,8 +55,8 @@ def process_queries(search_index, queries):
         iterate through all the queries and call the search function
         print the results returned by search function
     '''
-    print(search_index)
-    print(queries)
+    #print(search_index)
+    #print(queries)
     for word in queries:
         search(search_index,word)
 
