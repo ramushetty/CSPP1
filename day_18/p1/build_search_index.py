@@ -67,7 +67,7 @@ def build_search_index(docs):
     # return search index
     _index_ = {}
     s_i = {}
-    print(_index_)
+    #print(_index_)
     _cal_ = word_list(docs)
     #print(_cal_)
     stop_word = load_stopwords("stopwords.txt")
@@ -75,12 +75,12 @@ def build_search_index(docs):
     for word in _cal_:
         if word not in stop_word:
             _index_[word] =''
-    print(_index_)
-    print(docs[0])
+    #print(_index_)
+    #print(docs[0])
     ls=[]
 
     ls = _index_.keys()
-    print(ls[0])
+    #print(ls[0])
 
 
 
