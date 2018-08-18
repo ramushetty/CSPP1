@@ -37,24 +37,16 @@ def search(search_index, query):
         collect all the values for the words that are in the search_index
         make a set of doc_id and return
     '''
-    e_m2 = []
-    e_m = []
-    e_m3 = []
     dul = search_index
     l_o = query.lower().split()
     #print(lo)
-
-    for word in l_o:
-        e_m.append(word)
-    for word in e_m:
-        if word in dul:
-            e_m2.append(dul[word])
-    for word in e_m2:
-        for j in word:
-            e_m3.append(j[0])
-    _final_ = set(e_m3)
-    return _final_
-
+    for i in range(len(l_o)-1):
+        #print(i)
+        if l_o[i] in dul:
+         #   print(lo[i])
+          #  print(dul[lo[i]])
+        else:
+            print(set())
 
 
 def process_queries(search_index, queries):
@@ -63,8 +55,8 @@ def process_queries(search_index, queries):
         iterate through all the queries and call the search function
         print the results returned by search function
     '''
-    #print(search_index)
-    #print(queries)
+    print(search_index)
+    print(queries)
     for word in queries:
         search(search_index,word)
 
