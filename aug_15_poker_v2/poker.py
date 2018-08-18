@@ -5,21 +5,30 @@
 
 '''
 def main_function(hand):
+    '''
+    return length of a hand
+    '''
     lis_t = []
     string = "--23456789TJQKA"
     for st in string:
         lis_t.append(st)
     set1 = set()
-    for value, suite in hand:
+    for value, _ in hand:
         set1.add(lis_t.index(value))
         #print(set1)
     return len(set1)
 def is_fourofkind(hand):
+    '''
+    return true or false 
+    '''
     if main_function(hand) == 2:
         #print(hand)
         return True
     return False
 def is_twopair(hand):
+    '''
+    return true or false
+    '''
     if main_function(hand) == 3:
         return True
     return False
