@@ -143,7 +143,7 @@ def is_flush(hand):
     return len(set1) == 1
 def high_card(hand):
     ''' It returns the value of High Hand'''
-    set1 = func1(hand)
+    set1 = main_function(hand)
     if len(set1) == 5 and not is_flush(hand):
         return max(set1)/100
     return False
