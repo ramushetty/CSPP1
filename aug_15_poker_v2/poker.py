@@ -177,7 +177,7 @@ def hand_rank(hand):
     #print(hand)
     if is_straight(hand) and is_flush(hand):
         return 8
-    if is_four_kind(hand):
+    if is_fourofkind(hand):
         return 7
     if is_fullhouse(hand):
         return 6
