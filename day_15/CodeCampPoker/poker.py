@@ -16,6 +16,9 @@ def main_function(hand):
         set1.add(rank_list.index(num))
     return set1
 def is_onepair(hand):
+    '''
+    return one pair
+    '''
     string = '--23456789TJQKA'
     rank_list = [num for num in string]
     #print(rank_list)
@@ -190,7 +193,7 @@ def hand_rank(hand):
        return 3
     if is_twopair(hand):
         return 2
-    if is_onepair(hand) !=100:
+    if is_onepair(hand) != 100:
         return is_onepair(hand)
     return high_card(hand)
 def poker(hands):
