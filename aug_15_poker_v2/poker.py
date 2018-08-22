@@ -8,32 +8,33 @@ def main_function(hand):
     '''
     return length of a hand
     '''
-    lis_t = []
-    string = "--23456789TJQKA"
-    for st in string:
-        lis_t.append(st)
+    string = '--23456789TJQKA'
+    rank_list = [num for num in string]
+    #print(rank_list)
     set1 = set()
-    for value, _ in hand:
-        set1.add(lis_t.index(value))
-        #print(set1)
-    return len(set1)
-def is_four_kind(hand):
-    '''
-    return true or false 
-    '''
-    if main_function(hand) == 2:
-        #print(hand)
-        return True
-    return False
+    for num, _ in hand:
+        set1.add(rank_list.index(num))
+    return set1
+def is_onepair(hand):
+    string = '--23456789TJQKA'
+    rank_list = [num for num in string]
+    #print(rank_list)
+    set1 = set()
+    list1 = []
+    for num, _ in hand:
+        list1.append(rank_list.index(num))
+        set1.add(rank_list.index(num))
+    if len(set1) == 4:
+        #print(l)
+        for index in set1:
+            if list1.count(index) == 2:
+                return index/10
+    return 100
 def is_twopair(hand):
     '''
     return true or false
     '''
     if main_function(hand) == 3:
-        return True
-    return False
-def is_onepair(hand):
-    if main_function(hand) == 4:
         return True
     return False
 def three_four(hand):
@@ -61,6 +62,7 @@ def three_four(hand):
     for jindex in set1:
         counter.append(listt.count(jindex))
     return counter
+
 def is_three_kind(hand):
     '''Function for three kind'''
     count = three_four(hand)
@@ -68,6 +70,17 @@ def is_three_kind(hand):
     if count == 3:
         return True
     return False
+def is_four_kind(hand):
+    '''
+    return true or false 
+    '''
+    counter = three_four(hand)
+    counter = max(counter)
+    if counter == 4:
+        return True
+    return False
+
+
 def is_fullhouse(hand):
     '''Function for FullHouse'''
     count = three_four(hand)
