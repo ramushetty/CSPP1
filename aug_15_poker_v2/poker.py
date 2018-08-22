@@ -17,7 +17,7 @@ def main_function(hand):
         set1.add(lis_t.index(value))
         #print(set1)
     return len(set1)
-def is_fourofkind(hand):
+def is_four_kind(hand):
     '''
     return true or false 
     '''
@@ -90,28 +90,27 @@ def is_straight(hand):
     '''
     #print(len(hand))
     #print(hand[1])
-    l_s = []
-    #print(hand[0][0])
-    for j in hand:
-        if j[0] == "T":
-            l_s.append(10)
-        elif j[0] == "J":
-            l_s.append(11)
-        elif j[0] == "Q":
-            l_s.append(12)
-        elif j[0] == "K":
-            l_s.append(13)
-        elif j[0] == "A":
-            l_s.append(14)
+ length = len(hand)
+    listt = []
+    for index in range(length):
+        if hand[index][0] == 'T':
+            listt.append(10)
+        elif hand[index][0] == 'J':
+            listt.append(11)
+        elif hand[index][0] == 'Q':
+            listt.append(12)
+        elif hand[index][0] == 'K':
+            listt.append(13)
+        elif hand[index][0] == 'A':
+            listt.append(14)
         else:
-            l_s.append(j[0])
-    result = list(map(int, l_s))
-    #print(result)
-    result.sort()
-    #print(result)
-    #print(max(result))
-    if max(result) - min(result) == 4:
-        #print(hand)
+            listt.append(int(hand[index][0]))
+    count = 0
+    listt.sort()
+    for index in range(len(hand)-1):
+        if listt[index] == listt[index+1]-1:
+            count += 1
+    if count == len(hand)-1:
         return True
     return False
 def is_flush(hand):
@@ -124,13 +123,11 @@ def is_flush(hand):
         Write the code for it and return True if it is a flush else return False
     '''
     #print(hand)
-    coun = 0
-    for j in range(len(hand)-1):
-        if hand[j][1] == hand[0][1]:
-            coun += 1
-    if coun == len(hand)-1:
-        return True
-    return False
+    list1 = []
+    for _, suite in hand:
+        list1.append(suite)
+    set1 = set(list1)
+    return len(set1) == 1
 def high_card(hand):
     ''' It returns the value of High Hand'''
     set1 = func1(hand)
