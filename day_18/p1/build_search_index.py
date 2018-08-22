@@ -65,7 +65,7 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    _index_ = {}
+    _index_ = []
     s_i = {}
     #print(_index_)
     _cal_ = word_list(docs)
@@ -74,13 +74,14 @@ def build_search_index(docs):
     #print(stop_word)
     for word in _cal_:
         if word not in stop_word:
-            _index_[word] =''
-    #print(_index_)
-    #print(docs[0])
-    ls=[]
+            _index_.append(word) 
+    print(_index_)
+    print(len(doc[0]))
+    print(docs[0])
+    #for word in _index_:
+    #    for word 
 
-    ls = _index_.keys()
-    #print(ls[0])
+    
 
 
 
