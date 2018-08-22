@@ -5,7 +5,8 @@ import string
 
 VOWELS = 'aeiou'
 CONSONANTS = 'bcdfghjklmnpqrstvwxyz'
-HAND_SIZE = 7
+HAND_SIZE = 26
+
 
 SCRABBLE_LETTER_VALUES = {
     'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1, 'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1, 's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
@@ -48,7 +49,7 @@ def getFrequencyDict(sequence):
     for x in sequence:
         freq[x] = freq.get(x,0) + 1
     return freq
-	
+    
 
 # (end of helper code)
 # -----------------------------------
@@ -72,6 +73,18 @@ def getWordScore(word, n):
     returns: int >= 0
     """
     # TO DO ... <-- Remove this comment when you code this function
+    s = 0
+    c=0
+    for letter in word:
+        s += SCRABBLE_LETTER_VALUES[letter]
+        #print(s)
+        c +=1
+        if c==len(word):
+            s = s*len(word)
+            #print(s)
+            if c== n:
+                return s+50
+    return s
 
 
 
@@ -143,6 +156,12 @@ def updateHand(hand, word):
     returns: dictionary (string -> int)
     """
     # TO DO ... <-- Remove this comment when you code this function
+    updatehand = dict(hand)
+    for letter in range(len(word)):
+        if word[letter] in updatehand.keys():
+            updatehand[word[letter]]-=1
+        re = updatehand
+    return re
 
 
 
@@ -166,6 +185,27 @@ def isValidWord(word, hand, wordList):
 #
 # Problem #4: Playing a hand
 #
+    # word = word.lower()
+    whand={}
+    for j in word:
+        if j in whand:
+            whand[j]+=1
+        else:
+            whand[j]=1
+  
+    flag = 1
+    #print(hand,"updated")
+    #print(whand,"word freq")
+    for i in whand:
+        if i in hand:
+            if whand[i] == hand[i]:
+                continue
+        else:
+            flag = 0
+    if flag==1 and word in wordList:
+        return True
+    else:
+        return False
 
 def calculateHandlen(hand):
     """ 
@@ -175,6 +215,11 @@ def calculateHandlen(hand):
     returns: integer
     """
     # TO DO... <-- Remove this comment when you code this function
+    sum = 0 
+
+    for letter in hand:
+        sum = sum + hand.get(letter,0)
+    return sum 
 
 
 
@@ -232,7 +277,23 @@ def playHand(hand, wordList, n):
 
 #
 # Problem #5: Playing a game
-# 
+#
+    print(hand)
+    total =0
+    while True:
+        p = input("enter a word\n")
+        if p == '.':
+            break
+        if isValidWord(p, hand, wordList):
+            hand = updateHand(hand, p)
+            print(getWordScore(p, n))
+            total += getWordScore(p, n)
+            #print(total)
+            print(hand)
+        else:
+            print("invalid\n")
+
+
 
 def playGame(wordList):
     """
@@ -247,8 +308,20 @@ def playGame(wordList):
     2) When done playing the hand, repeat from step 1    
     """
     # TO DO ... <-- Remove this comment when you code this function
-    print("playGame not yet implemented.") # <-- Remove this line when you code the function
-   
+    #print("playGame not yet implemented.") # <-- Remove this line when you code the function
+    hand=dealHand(HAND_SIZE)  
+    while True:
+        s = input("enter n or r or e\n")
+        if s=="e":
+            break
+        elif s == "n":        
+            playHand(hand,wordList,HAND_SIZE)
+        elif s=="r":
+            playHand(hand,wordList,HAND_SIZE)
+
+
+
+
 
 
 
