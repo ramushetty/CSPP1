@@ -103,7 +103,7 @@ def is_straight(hand):
     '''
     #print(len(hand))
     #print(hand[1])
- length = len(hand)
+    length = len(hand)
     listt = []
     for index in range(length):
         if hand[index][0] == 'T':
