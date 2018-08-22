@@ -76,7 +76,7 @@ def is_three_kind(hand):
     return False
 def is_four_kind(hand):
     '''
-    return true or false 
+    return true or false
     '''
     counter = three_four(hand)
     counter = max(counter)
@@ -190,7 +190,7 @@ def hand_rank(hand):
     if is_straight(hand):
         return 4
     if is_three_kind(hand):
-       return 3
+        return 3
     if is_twopair(hand):
         return 2
     if is_onepair(hand) != 100:
