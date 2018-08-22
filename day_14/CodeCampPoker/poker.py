@@ -2,7 +2,94 @@
     Write a program to evaluate poker hands and determine the winner
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
+
 '''
+def main_function(hand):
+    '''
+    return length of a hand
+    '''
+    string = '--23456789TJQKA'
+    rank_list = [num for num in string]
+    #print(rank_list)
+    set1 = set()
+    for num, _ in hand:
+        set1.add(rank_list.index(num))
+    return set1
+def is_onepair(hand):
+    string = '--23456789TJQKA'
+    rank_list = [num for num in string]
+    #print(rank_list)
+    set1 = set()
+    list1 = []
+    for num, _ in hand:
+        list1.append(rank_list.index(num))
+        set1.add(rank_list.index(num))
+    if len(set1) == 4:
+        #print(l)
+        for index in set1:
+            if list1.count(index) == 2:
+                return index/10
+    return 100
+def is_twopair(hand):
+    '''
+    return true or false
+    '''
+    if main_function(hand) == 3:
+        return True
+    return False
+def three_four(hand):
+    '''Function call for Three/four kind, full house'''
+    length = len(hand)
+    listt = []
+    for index in range(length):
+        if hand[index][0] == 'T':
+            listt.append(10)
+        elif hand[index][0] == 'J':
+            listt.append(11)
+        elif hand[index][0] == 'Q':
+            listt.append(12)
+        elif hand[index][0] == 'K':
+            listt.append(13)
+        elif hand[index][0] == 'A':
+            listt.append(14)
+        else:
+            listt.append(int(hand[index][0]))
+    listt.sort()
+    #yaarcopy = yaar.copy()
+    counter = []
+    jindex = 0
+    set1 = set(listt)
+    for jindex in set1:
+        counter.append(listt.count(jindex))
+    return counter
+
+def is_three_kind(hand):
+    '''Function for three kind'''
+    count = three_four(hand)
+    count = max(count)
+    if count == 3:
+        return True
+    return False
+def is_four_kind(hand):
+    '''
+    return true or false 
+    '''
+    counter = three_four(hand)
+    counter = max(counter)
+    if counter == 4:
+        return True
+    return False
+
+
+def is_fullhouse(hand):
+    '''Function for FullHouse'''
+    count = three_four(hand)
+    if 3 in count:
+        if 2 in count:
+            return True
+    return False
+
+
 
 def is_straight(hand):
     '''
@@ -16,28 +103,27 @@ def is_straight(hand):
     '''
     #print(len(hand))
     #print(hand[1])
-    l_s = []
-    #print(hand[0][0])
-    for j in hand:
-        if j[0] == "T":
-            l_s.append(10)
-        elif j[0] == "J":
-            l_s.append(11)
-        elif j[0] == "Q":
-            l_s.append(12)
-        elif j[0] == "K":
-            l_s.append(13)
-        elif j[0] == "A":
-            l_s.append(14)
+ length = len(hand)
+    listt = []
+    for index in range(length):
+        if hand[index][0] == 'T':
+            listt.append(10)
+        elif hand[index][0] == 'J':
+            listt.append(11)
+        elif hand[index][0] == 'Q':
+            listt.append(12)
+        elif hand[index][0] == 'K':
+            listt.append(13)
+        elif hand[index][0] == 'A':
+            listt.append(14)
         else:
-            l_s.append(j[0])
-    result = list(map(int, l_s))
-    #print(result)
-    result.sort()
-    #print(result)
-    #print(max(result))
-    if max(result) - min(result) == 4:
-        #print(hand)
+            listt.append(int(hand[index][0]))
+    count = 0
+    listt.sort()
+    for index in range(len(hand)-1):
+        if listt[index] == listt[index+1]-1:
+            count += 1
+    if count == len(hand)-1:
         return True
     return False
 def is_flush(hand):
@@ -50,13 +136,18 @@ def is_flush(hand):
         Write the code for it and return True if it is a flush else return False
     '''
     #print(hand)
-    coun = 0
-    for j in range(len(hand)-1):
-        if hand[j][1] == hand[0][1]:
-            coun += 1
-    if coun == len(hand)-1:
-        return True
+    list1 = []
+    for _, suite in hand:
+        list1.append(suite)
+    set1 = set(list1)
+    return len(set1) == 1
+def high_card(hand):
+    ''' It returns the value of High Hand'''
+    set1 = main_function(hand)
+    if len(set1) == 5 and not is_flush(hand):
+        return max(set1)/100
     return False
+
 
 
 def hand_rank(hand):
@@ -85,13 +176,22 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     #print(hand)
     if is_straight(hand) and is_flush(hand):
-        return 3
+        return 8
+    if is_fourofkind(hand):
+        return 7
+    if is_fullhouse(hand):
+        return 6
     if is_flush(hand):
-        return 2
+        return 5
     if is_straight(hand):
-        return 1
-    return 0
-
+        return 4
+    if three_kind(hand):
+       return 3
+    if is_twopair(hand):
+        return 2
+    if is_onepair(hand) !=100:
+        return is_onepair(hand)
+    return high_card(hand)
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
