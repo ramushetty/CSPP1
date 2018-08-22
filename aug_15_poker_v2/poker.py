@@ -61,14 +61,14 @@ def three_four(hand):
     for jindex in set1:
         counter.append(listt.count(jindex))
     return counter
-def three_kind(hand):
+def is_three_kind(hand):
     '''Function for three kind'''
     count = three_four(hand)
     count = max(count)
     if count == 3:
         return True
     return False
-def fullhouse(hand):
+def is_fullhouse(hand):
     '''Function for FullHouse'''
     count = three_four(hand)
     if 3 in count:
