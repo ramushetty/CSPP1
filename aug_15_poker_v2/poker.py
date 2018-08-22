@@ -179,8 +179,8 @@ def hand_rank(hand):
        return 3
     if is_twopair(hand):
         return 2
-    if is_onepair(hand):
-        return 1    
+    if is_onepair(hand) !=100:
+        return is_onepair(hand)
     return high_card(hand)
 def poker(hands):
     '''
