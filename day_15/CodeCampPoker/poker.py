@@ -34,7 +34,8 @@ def is_twopair(hand):
     '''
     return true or false
     '''
-    if main_function(hand) == 3:
+    sett = main_function(hand)
+    if len(sett) == 3:
         return True
     return False
 def three_four(hand):
@@ -136,10 +137,10 @@ def is_flush(hand):
         Write the code for it and return True if it is a flush else return False
     '''
     #print(hand)
-    list1 = []
+    listt1 = []
     for _, suite in hand:
-        list1.append(suite)
-    set1 = set(list1)
+        listt1.append(suite)
+    set1 = set(listt1)
     return len(set1) == 1
 def high_card(hand):
     ''' It returns the value of High Hand'''
