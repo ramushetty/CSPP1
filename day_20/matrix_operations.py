@@ -67,7 +67,7 @@ def read_matrix(m_1, m_2, arr, arr1):
             for i in range(arr[0]):
                 if len(m_2[i]) != arr[1]:
                     f_i = 1
-    #print(count)
+    #print(f_i
     if f_i == 0 and first == 0:
         return True
     else:
