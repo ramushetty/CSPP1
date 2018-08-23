@@ -13,10 +13,10 @@ def mult_matrix(m1, m2):
     mat_len3 = len(m2)
     for index in range(mat_len1):
         new2 = []
-        for y in range(mat_len2):
+        for y_y in range(mat_len2):
             sum1 = 0
-            for x in range(mat_len3):
-                sum1 += m1[index][x]*m2[x][y]
+            for x_x in range(mat_len3):
+                sum1 += m1[index][x_x]*m2[x][y_y]
             new2.append(sum1)
         new1.append(new2)
     return new1
@@ -29,7 +29,7 @@ def mult_matrix(m1, m2):
         add1.append(add2)
     print(add1)
     '''
-def add_matrix(m1, m2,):
+def add_matrix(m_1, m_2,):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -39,10 +39,10 @@ def add_matrix(m1, m2,):
     '''
 
     add1 = []
-    for i in range(len(m1)):
+    for i in range(len(m_1)):
         add2 = []
-        for (a, b) in zip(m1[i], m2[i]):
-            add2.append(a+b)
+        for (a_a, b_b) in zip(m_1[i], m_2[i]):
+            add2.append(a_a+b_b)
         add1.append(add2)
     return add1
 
@@ -56,7 +56,7 @@ def read_matrix(m1, m2, arr, arr1):
     '''
     #count = 0
     first = 0
-    fi = 0
+    f_i = 0
     arr_len = len(arr)
     for index in range(arr_len):
         if arr[index] == len(m1):
@@ -68,9 +68,9 @@ def read_matrix(m1, m2, arr, arr1):
         if arr[index] == len(m2):
             for i in range(arr[0]):
                 if len(m2[i]) == arr[1]:
-                    fi = 2
+                    f_i = 2
     #print(count)
-    if fi == 2 and first == 1:
+    if f_i == 2 and first == 1:
         return True
     else:
         return False
