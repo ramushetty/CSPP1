@@ -20,15 +20,6 @@ def mult_matrix(m_1, m_2):
             new2.append(sum1)
         new1.append(new2)
     return new1
-    '''
-    add1=[]
-    for i in range(len(m1)):
-        add2=[]
-        for (a,b) in zip(m1[i], m2[i]):
-            add2.append(a*b)
-        add1.append(add2)
-    print(add1)
-    '''
 def add_matrix(m_1, m_2,):
     '''
         check if the matrix shapes are similar
