@@ -3,15 +3,12 @@ matrix addition and substraction
 '''
 def mult_matrix(m_1, m_2):
     '''
-    matrix multiplication
-    '''
-    '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
         print an error message if the matrix shapes are not valid for mult
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
-    '''
+      '''
     new1 = []
     #new2 = []
     mat_len1 = len(m_1)
