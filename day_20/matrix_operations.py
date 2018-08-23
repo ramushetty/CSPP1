@@ -38,9 +38,9 @@ def add_matrix(m1, m2,):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
 
-    add1= []
+    add1 = []
     for i in range(len(m1)):
-        add2= []
+        add2 = []
         for (a,b) in zip(m1[i], m2[i]):
             add2.append(a+b)
         add1.append(add2)
@@ -61,13 +61,13 @@ def read_matrix(m1, m2, arr, arr1):
     for index in range(arr_len):
         if arr[index] == len(m1):
             for i in range(arr[0]):
-                if len(m1[i])== arr[1]:
+                if len(m1[i]) == arr[1]:
                     first = 1
     arr_len = len(arr1)
     for index in range(arr_len):
         if arr[index] == len(m2):
             for i in range(arr[0]):
-                if len(m2[i])== arr[1]:
+                if len(m2[i]) == arr[1]:
                     fi = 2             
     #print(count)
     if fi == 2 and first == 1:
@@ -87,7 +87,7 @@ def main():
         for j in range(arr[1]):
             matrix1.append(list(map(int, input().split())))
             #print(matrix1)
-            if len(matrix1)== arr[1]:
+            if len(matrix1) == arr[1]:
                 break
             break
     #print(matrix1)
@@ -97,13 +97,13 @@ def main():
     for i in range(arr1[0]):
         for j in range(arr1[1]):
             matrix2.append(list(map(int, input().split())))
-            if len(matrix2)== arr1[1]:
+            if len(matrix2) == arr1[1]:
                 break
             break
     #print(matrix2)
     c_c = arr1[0]*arr1[1]
 
-    if read_matrix(matrix1, matrix2, arr, arr1 ) == True:
+    if read_matrix(matrix1, matrix2, arr, arr1) == True:
 
 
     # add matrix 1 and matrix 2
@@ -118,18 +118,12 @@ def main():
 
         # multiply matrix 1 and matrix 2
 
-        if arr[1]== arr1[0]:
+        if arr[1] == arr1[0]:
             print(mult_matrix(matrix1, matrix2))
         else:
             print("Error: Matrix shapes invalid for mult")
             print("None")
     else:
-        print("Error: Invalid input for the matrix")
-        
-
-
-
-    
-
+        print("Error: Invalid input for the matrix")        
 if __name__ == '__main__':
     main()
