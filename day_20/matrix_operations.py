@@ -1,3 +1,6 @@
+'''
+matrix addition and substraction
+'''
 def mult_matrix(m_1, m_2):
     '''
     matrix multiplication
