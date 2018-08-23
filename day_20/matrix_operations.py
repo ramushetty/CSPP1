@@ -50,7 +50,7 @@ def add_matrix(m1, m2,):
         add1.append(add2)
     return add1 
 
-def read_matrix():
+def read_matrix(m1, m2, c_c):
     '''
         read the matrix dimensions from input
         create a list of lists and read the numbers into it
@@ -58,7 +58,17 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    pass
+    count = 0
+    for listt1 in m1:
+        for listt2 in m2:
+            if len(listt1) == len(listt2):
+                count +=1 
+                
+    #print(count)
+    if count == c_c :
+        return True
+    else:
+        return False
 
 def main():
     '''
@@ -92,23 +102,30 @@ def main():
                 break
             break
     #print(matrix2)
+    c_c = arr1[0]*arr1[1]
+
+    if read_matrix(matrix1, matrix2, c_c) == True:
+
 
     # add matrix 1 and matrix 2
-    
-    if arr[0] == arr1[0] and arr[1] == arr1[1]:
-        print(add_matrix(matrix1, matrix2))
+        
+        if arr[0] == arr1[0] and arr[1] == arr1[1]:
+            print(add_matrix(matrix1, matrix2))
+        else:
+            print("Error: Matrix shapes invalid for addition")
+            print("None")
+
+
+
+        # multiply matrix 1 and matrix 2
+
+        if arr[1]==arr1[0]:
+            print(mult_matrix(matrix1, matrix2))
+        else:
+            print("Error: Matrix shapes invalid for mult")
+            print("None")
     else:
-        print("Error: Matrix shapes invalid for addition")
-        print("None")
-
-
-
-    # multiply matrix 1 and matrix 2
-
-    if arr[1]==arr1[0]:
-        print(mult_matrix(matrix1, matrix2))
-    else:
-        print("Error: Matrix shapes invalid for mult")
+        print("Error: Invalid input for the matrix")
         print("None")
 
 
