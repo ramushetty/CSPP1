@@ -1,5 +1,8 @@
 def mult_matrix(m_1, m_2):
     '''
+    matrix multiplication
+    '''
+    '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
         print an error message if the matrix shapes are not valid for mult
