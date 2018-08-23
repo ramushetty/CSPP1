@@ -79,10 +79,12 @@ def build_search_index(docs):
                 _index_.append(letter) 
     print(_index_)
     #print(len(doc[0]))
-    print(docs[0])
+    #print(docs[0])
     #for word in _index_:
     #    for word 
-    #for word in _index_:
+    for word in _index_:
+        
+
 
     
 
