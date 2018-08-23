@@ -61,6 +61,9 @@ def read_matrix():
     pass
 
 def main():
+    '''
+    takes input
+    '''
     # read matrix 1
     arr = list(map(int, input().split(',')))
     #print(arr)
@@ -75,7 +78,7 @@ def main():
             break
 
 
-    print(matrix1)
+    #print(matrix1)
 
 
 
@@ -88,7 +91,7 @@ def main():
             if len(matrix2)==arr1[1]:
                 break
             break
-    print(matrix2)
+    #print(matrix2)
 
     # add matrix 1 and matrix 2
     
