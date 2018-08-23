@@ -16,7 +16,7 @@ def mult_matrix(m1, m2):
         for y_y in range(mat_len2):
             sum1 = 0
             for x_x in range(mat_len3):
-                sum1 += m1[index][x_x]*m2[x][y_y]
+                sum1 += m1[index][x_x]*m2[x_x][y_y]
             new2.append(sum1)
         new1.append(new2)
     return new1
