@@ -40,10 +40,9 @@ def word_list(text):
         return a list of words
     '''
     import re
-    cl = ""
-    cl = ''.join(text)
+
     #print(cl)
-    new_list = re.sub(r'[^a-zA-Z ]', '', cl).lower().strip().split()
+    new_list = re.sub('[^a-zA-Z ]', '', text).lower().strip().split(" ")
     #print(new_list)
 
     return new_list
@@ -68,18 +67,22 @@ def build_search_index(docs):
     _index_ = []
     s_i = {}
     #print(_index_)
-    _cal_ = word_list(docs)
+    _cal_ = list(map(word_list, docs))
+   
+    #print(_cal_)
     #print(_cal_)
     stop_word = load_stopwords("stopwords.txt")
     #print(stop_word)
     for word in _cal_:
-        if word not in stop_word:
-            _index_.append(word) 
+        for  letter in word:
+            if letter not in stop_word:
+                _index_.append(letter) 
     print(_index_)
-    print(len(doc[0]))
+    #print(len(doc[0]))
     print(docs[0])
     #for word in _index_:
     #    for word 
+    #for word in _index_:
 
     
 
@@ -114,7 +117,7 @@ def main():
     for i in range(lines):
         documents.append(input())
         i += 1
-    print(documents)
+    #print(documents)
     # call print to display the search index
     print_search_index(build_search_index(documents))
 
