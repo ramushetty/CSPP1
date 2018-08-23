@@ -50,7 +50,7 @@ def add_matrix(m1, m2,):
         add1.append(add2)
     return add1 
 
-def read_matrix(m1, m2, c_c):
+def read_matrix(m1, m2, arr, arr1):
     '''
         read the matrix dimensions from input
         create a list of lists and read the numbers into it
@@ -58,7 +58,7 @@ def read_matrix(m1, m2, c_c):
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    count = 0
+    #count = 0
     arr_len = len(arr)
     for index in range(arr_len):
         if arr[index] == len(m1):
