@@ -59,13 +59,25 @@ def read_matrix(m1, m2, c_c):
         error message should be "Error: Invalid input for the matrix"
     '''
     count = 0
-    for listt1 in m1:
-        for listt2 in m2:
-            if len(listt1) == len(listt2):
-                count +=1 
+    arr_len = len(arr)
+    for index in range(arr_len):
+        if arr[index] == len(m1):
+            for i in range(arr[0]):
+                if len(m1[i])==arr[1]:
+                    first = 1
+    arr_len = len(arr1)
+    for index in range(arr_len):
+        if arr[index] == len(m2):
+            for i in range(arr[0]):
+                if len(m2[i])==arr[1]:
+                    fi = 1
+
+
+
+
                 
     #print(count)
-    if count == c_c :
+    if fi == 1 and first == 1:
         return True
     else:
         return False
@@ -104,7 +116,7 @@ def main():
     #print(matrix2)
     c_c = arr1[0]*arr1[1]
 
-    if read_matrix(matrix1, matrix2, c_c) == True:
+    if read_matrix(matrix1, matrix2, arr, arr1 ) == True:
 
 
     # add matrix 1 and matrix 2
