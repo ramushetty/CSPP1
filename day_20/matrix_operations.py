@@ -83,8 +83,8 @@ def main():
     #print(arr)
     matrix1 = []
     matrix2 = []
-    for i in range(arr[0]):
-        for j in range(arr[1]):
+    for _ in range(arr[0]):
+        for _ in range(arr[1]):
             matrix1.append(list(map(int, input().split())))
             #print(matrix1)
             if len(matrix1) == arr[1]:
@@ -94,8 +94,8 @@ def main():
     # read matrix 2
     arr1 = list(map(int, input().split(',')))
     #print(arr1)
-    for i in range(arr1[0]):
-        for j in range(arr1[1]):
+    for _ in range(arr1[0]):
+        for _ in range(arr1[1]):
             matrix2.append(list(map(int, input().split())))
             if len(matrix2) == arr1[1]:
                 break
