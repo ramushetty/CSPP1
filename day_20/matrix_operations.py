@@ -41,7 +41,7 @@ def add_matrix(m1, m2,):
     add1 = []
     for i in range(len(m1)):
         add2 = []
-        for (a,b) in zip(m1[i], m2[i]):
+        for (a, b) in zip(m1[i], m2[i]):
             add2.append(a+b)
         add1.append(add2)
     return add1
@@ -68,7 +68,7 @@ def read_matrix(m1, m2, arr, arr1):
         if arr[index] == len(m2):
             for i in range(arr[0]):
                 if len(m2[i]) == arr[1]:
-                    fi = 2             
+                    fi = 2
     #print(count)
     if fi == 2 and first == 1:
         return True
@@ -101,21 +101,14 @@ def main():
                 break
             break
     #print(matrix2)
-    c_c = arr1[0]*arr1[1]
-
+    #c_c = arr1[0]*arr1[1]
     if read_matrix(matrix1, matrix2, arr, arr1) == True:
-
-
     # add matrix 1 and matrix 2
-        
         if arr[0] == arr1[0] and arr[1] == arr1[1]:
             print(add_matrix(matrix1, matrix2))
         else:
             print("Error: Matrix shapes invalid for addition")
             print("None")
-
-
-
         # multiply matrix 1 and matrix 2
 
         if arr[1] == arr1[0]:
