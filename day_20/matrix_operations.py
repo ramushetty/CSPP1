@@ -1,4 +1,4 @@
-def mult_matrix(m1, m2):
+def mult_matrix(m_1, m_2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -8,15 +8,15 @@ def mult_matrix(m1, m2):
     '''
     new1 = []
     #new2 = []
-    mat_len1 = len(m1)
-    mat_len2 = len(m2[0])
-    mat_len3 = len(m2)
+    mat_len1 = len(m_1)
+    mat_len2 = len(m_2[0])
+    mat_len3 = len(m_2)
     for index in range(mat_len1):
         new2 = []
         for y_y in range(mat_len2):
             sum1 = 0
             for x_x in range(mat_len3):
-                sum1 += m1[index][x_x]*m2[x_x][y_y]
+                sum1 += m_1[index][x_x]*m_2[x_x][y_y]
             new2.append(sum1)
         new1.append(new2)
     return new1
@@ -46,7 +46,7 @@ def add_matrix(m_1, m_2,):
         add1.append(add2)
     return add1
 
-def read_matrix(m1, m2, arr, arr1):
+def read_matrix(m_1, m_2, arr, arr1):
     '''
         read the matrix dimensions from input
         create a list of lists and read the numbers into it
@@ -59,15 +59,15 @@ def read_matrix(m1, m2, arr, arr1):
     f_i = 0
     arr_len = len(arr)
     for index in range(arr_len):
-        if arr[index] == len(m1):
+        if arr[index] == len(m_1):
             for i in range(arr[0]):
-                if len(m1[i]) == arr[1]:
+                if len(m_1[i]) == arr[1]:
                     first = 1
     arr_len = len(arr1)
     for index in range(arr_len):
-        if arr[index] == len(m2):
+        if arr[index] == len(m_2):
             for i in range(arr[0]):
-                if len(m2[i]) == arr[1]:
+                if len(m_2[i]) == arr[1]:
                     f_i = 2
     #print(count)
     if f_i == 2 and first == 1:
