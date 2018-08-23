@@ -59,6 +59,8 @@ def read_matrix(m1, m2, arr, arr1):
         error message should be "Error: Invalid input for the matrix"
     '''
     #count = 0
+    first = 0
+    fi = 0
     arr_len = len(arr)
     for index in range(arr_len):
         if arr[index] == len(m1):
@@ -70,14 +72,14 @@ def read_matrix(m1, m2, arr, arr1):
         if arr[index] == len(m2):
             for i in range(arr[0]):
                 if len(m2[i])==arr[1]:
-                    fi = 1
+                    fi = 2
 
 
 
 
                 
     #print(count)
-    if fi == 1 and first == 1:
+    if fi == 2 and first == 1:
         return True
     else:
         return False
