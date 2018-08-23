@@ -60,11 +60,11 @@ def read_matrix(m_1, m_2, arr, arr1):
                     first = 1
     arr_len = len(arr1)
     for index in range(arr_len):
-        if arr[index] == len(m_2):
+        if arr1[index] == len(m_2):
             for i in range(arr[0]):
-                if len(m_2[i]) != arr[1]:
+                if len(m_2[i]) != arr1[1]:
                     f_i = 1
-    #print(f_i
+    print(f_i)
     if f_i == 0 and first == 0:
         return True
     return False
