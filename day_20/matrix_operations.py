@@ -126,7 +126,7 @@ def main():
             print("None")
     else:
         print("Error: Invalid input for the matrix")
-        print("None")
+        
 
 
 
