@@ -30,7 +30,8 @@ def add_matrix(m_1, m_2,):
     '''
 
     add1 = []
-    for i in range(len(m_1)):
+    len_l = len(m_1)
+    for i in range(len_l):
         add2 = []
         for (a_a, b_b) in zip(m_1[i], m_2[i]):
             add2.append(a_a+b_b)
