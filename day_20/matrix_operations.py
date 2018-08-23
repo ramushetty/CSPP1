@@ -67,8 +67,7 @@ def read_matrix(m_1, m_2, arr, arr1):
     #print(f_i
     if f_i == 0 and first == 0:
         return True
-    else:
-        return False
+    return False
 def main():
     '''
     takes input
