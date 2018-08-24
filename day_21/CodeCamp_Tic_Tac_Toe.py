@@ -37,20 +37,20 @@ def  check(cha):
         return True
     if check_list(cha, 6, 4, 2):
         return True
-empty = []
-x_count = BOARD.count('x');o_count = BOARD.count('o');dot_count = BOARD.count('.')
+EMPTY = []
+X_count = BOARD.count('x');O_count = BOARD.count('o');Dot_count = BOARD.count('.')
 C_C = 0
 S_S = 0
-if x_count + o_count + dot_count == 9:
-    if abs(x_count - o_count) == 1:
+if X_count + O_count + Dot_count == 9:
+    if abs(X_count - O_count) == 1:
         for char in BOARD:
             if char != '.':
                 if check(char) == True:
                     S_S = 1
-                    empty.append(char)
+                    EMPTY.append(char)
         if S_S == 1:
-            empty = list(set(empty))
-            print(empty[0])
+            EMPTY = list(set(EMPTY))
+            print(EMPTY[0])
         else:
             print("draw")
     else:
