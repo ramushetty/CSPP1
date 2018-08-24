@@ -31,13 +31,10 @@ def  check(cha):
 		return True
 	if check_list(char, 6, 4, 2):
 		return True
-
+	#print("draw")
 
 #print(board)
 empty = []
-summ = []
-#for letter in board:
-
 x_count = board.count('x')
 #print(x_count)
 o_count = board.count('o')
@@ -45,15 +42,19 @@ o_count = board.count('o')
 dot_count = board.count('.')
 #print(dot_count)
 c_c = 0
+s_s = 0
 if x_count + o_count + dot_count == 9:
 	if abs(x_count - o_count) == 1:
 		for char in board:
 			if char != '.': 
 				if check(char) == True:
+					s_s = 1
 					empty.append(char)
-		empty = list(set(empty))
-
-		print(empty[0])
+		if s_s == 1:
+			empty = list(set(empty))
+			print(empty[0])
+		else:
+			print("draw")
 	else:
 		c_c = 1
 		print("invalid game")
