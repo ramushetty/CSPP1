@@ -37,6 +37,7 @@ def  check(cha):
         return True
     if check_list(cha, 6, 4, 2):
         return True
+    return False
 EMPTY = []
 X_X = BOARD.count('x')
 O_O = BOARD.count('o')
