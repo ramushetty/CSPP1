@@ -38,7 +38,9 @@ def  check(cha):
     if check_list(cha, 6, 4, 2):
         return True
 EMPTY = []
-X_X = BOARD.count('x');O_O = BOARD.count('o');D_D = BOARD.count('.')
+X_X = BOARD.count('x')
+O_O = BOARD.count('o')
+D_D = BOARD.count('.')
 C_C = 0
 S_S = 0
 if X_X + O_O + D_D == 9:
