@@ -65,6 +65,7 @@ WORDLIST_FILENAME = 'words.txt'
 # Helper code End
 class Message:
     '''
+    class 
     '''
     def __init__(self, text):
         '''
@@ -112,7 +113,6 @@ class Message:
 
 
 ### Paste your implementation of the Message class here
-        
 
 def main():
     '''
