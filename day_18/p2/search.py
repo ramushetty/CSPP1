@@ -63,7 +63,6 @@ def main():
     '''
     # This line loads the search index
     search_index = eval(input())
-
     # read the number of search queries
     lines = int(input()) 
     # read the search queries into a list
@@ -71,7 +70,6 @@ def main():
     for i in range(lines):
         queries.append(input())
         i += 1
-
     # call process queries
     process_queries(search_index, queries)
 
