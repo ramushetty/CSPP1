@@ -1,10 +1,7 @@
-board = [0, 1, 2, 
-		 3, 4, 5, 
-		 6, 7, 8]
+board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 dublicate = []
-for loop in range(3):	
+for loop in range(3):
 	dublicate.append(list(map(str, input().split())))
-#print(dublicate)
 i = 0
 for first in dublicate:
 	for element in first:
@@ -14,7 +11,7 @@ def check_list(char, in1, in2, in3):
 	if board[in1] == char and board[in2] == char and board[in3] == char:
 		return True
 	return False
-def  check(cha):
+def  check(char):
 	if check_list(char, 0, 1, 2):
 		return True
 	if check_list(char, 0, 3, 6):
@@ -31,16 +28,10 @@ def  check(cha):
 		return True
 	if check_list(char, 6, 4, 2):
 		return True
-	#print("draw")
-
-#print(board)
 empty = []
 x_count = board.count('x')
-#print(x_count)
 o_count = board.count('o')
-#print(o_count)
 dot_count = board.count('.')
-#print(dot_count)
 c_c = 0
 s_s = 0
 if x_count + o_count + dot_count == 9:
