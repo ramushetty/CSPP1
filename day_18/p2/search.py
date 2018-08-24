@@ -65,8 +65,7 @@ def main():
     search_index = eval(input())
 
     # read the number of search queries
-    lines = int(input())
-    
+    lines = int(input()) 
     # read the search queries into a list
     queries = []
     for i in range(lines):
@@ -75,6 +74,7 @@ def main():
 
     # call process queries
     process_queries(search_index, queries)
+
 
 if __name__ == '__main__':
     main()
