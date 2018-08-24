@@ -8,7 +8,7 @@ for loop in range(3):
 i = 0
 for first in dublicate:
     for element in first:
-        board[i] = element
+        BOARD[i] = element
         i += 1
 def check_list(char, in1, in2, in3):
     '''
