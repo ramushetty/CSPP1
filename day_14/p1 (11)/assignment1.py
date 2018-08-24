@@ -67,8 +67,8 @@ class Message:
         '''
         instance
         '''
-    self.message_text = text
-    self.valid_words = load_words("words.txt")
+        self.message_text = text
+        self.valid_words = load_words("words.txt")
     def get_message_text(self):
         '''
         to get message
