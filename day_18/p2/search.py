@@ -56,9 +56,7 @@ def process_queries(search_index, queries):
     #print(search_index)
     #print(queries)
     for word in queries:
-        search(search_index,word)
-
-
+        search(search_index, word)
 def main():
     '''
         main function
