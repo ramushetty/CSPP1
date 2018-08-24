@@ -82,7 +82,12 @@ def build_search_index(docs):
     #print(docs[0])
     #for word in _index_:
     #    for word 
-    for word in _index_:
+    # for word in _index_:
+    #     for i in range(0, len(docs)-1):
+    #         if word not in s_i[i]:
+    #             s_i[word] = [(i, docs.count(word))]
+    #         else:
+    #             s_i[i].append()
         
 
 

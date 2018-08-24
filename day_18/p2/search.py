@@ -38,17 +38,14 @@ def search(search_index, query):
         make a set of doc_id and return
     '''
     dul = search_index
-    l_o = query.lower().split()
-    #print(lo)
-    for i in range(len(l_o)-1):
-        #print(i)
-        if l_o[i] in dul:
-        #   print(lo[i])
-            print(dul[l_o[i]])
-        else:
-            print(set())
-
-
+    dul2 = []
+    l_o = query.split()
+    for word in l_o:
+        if word in dul:
+            for index in range(len(dul[word])):
+                dul2.append(dul[word][index][0])
+    dul2 = set(dul2)
+    return dul2
 def process_queries(search_index, queries):
     '''
         function to process the search queries
