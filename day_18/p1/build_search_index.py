@@ -69,35 +69,23 @@ def build_search_index(docs):
     length = len(docs)
     for i in range(length):
         doc = word_list(docs[i])
-        for j in s_i:
+        #print(doc)
+        for j in doc:
             word_count = doc.count(j)
-            if j in adict:
+            if j in s_i:
                 if (i, word_count) not in s_i[j]:
                     s_i[j].append((i, word_count))
             else:
                 s_i[j] = [(i, word_count)]
+    print(s_i)
 
     stop_words = load_stopwords('stopwords.txt')
 
-    for stop in stop_words:
-        if stop in s_i:
-            del s_i[stop_words]
+    for word in stop_words:
+        if word in s_i:
+            del s_i[word]
+    print(s_i)
     return s_i
-
-
-
-        
-
-
-    
-
-
-
-
-
-
-
-
 
 # helper function to print the search index
 # use this to verify how the search index looks
