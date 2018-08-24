@@ -132,35 +132,39 @@ class PlaintextMessage():
     '''
     class
     '''
-    self.text = text
-    self.shift = shift
-    self.valid_words = load_words("words.txt")
-    message = Message(text)
-    self.encrypting_dict = message.build_shift_dict(shift)
-    self.get_message_text_encrypted = message.apply_shift(shift)
-def get_shift(self):
-    '''
-    shift method
-    '''
-    return self.shift
-def get_encrypting_dict(self):
-    '''
-    encrypting method
-    '''
-    return self.encrypting_dict
-def get_message_text_encrypted(self):
-    '''
-    message encryption method 
-    '''
-    return self.get_message_text_encrypted
-def change_shift(self, shift):
-    '''
-    to change the shift
-    '''
-    self.shift = shift
-    message = Message(self.text)
-    self.encrypting_dict = message.build_shift_dict(shift)
-    self.get_message_text_encrypted = message.apply_shift(shift)
+    def __init__(self, text, shift):
+        '''
+        instance
+        '''
+        self.text = text
+        self.shift = shift
+        self.valid_words = load_words("words.txt")
+        message = Message(text)
+        self.encrypting_dict = message.build_shift_dict(shift)
+        self.get_message_text_encrypted = message.apply_shift(shift)
+    def get_shift(self):
+        '''
+        shift method
+        '''
+        return self.shift
+    def get_encrypting_dict(self):
+        '''
+        encrypting method
+        '''
+        return self.encrypting_dict
+    def get_message_text_encrypted(self):
+        '''
+        message encryption method 
+        '''
+        return self.get_message_text_encrypted
+    def change_shift(self, shift):
+        '''
+        to change the shift
+        '''
+        self.shift = shift
+        message = Message(self.text)
+        self.encrypting_dict = message.build_shift_dict(shift)
+        self.get_message_text_encrypted = message.apply_shift(shift)
 
 ### Paste your implementation of the `PlaintextMessage` class here
 
