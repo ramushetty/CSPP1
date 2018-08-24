@@ -4,7 +4,7 @@ board = [0, 1, 2,
 dublicate = []
 for loop in range(3):	
 	dublicate.append(list(map(str, input().split())))
-#print(dublicate)
+print(dublicate)
 i = 0
 for first in dublicate:
 	for element in first:
@@ -31,10 +31,25 @@ def  check(cha):
 		return True
 	if check_list(char, 6, 4, 2):
 		return True
+
+print(board)
 empty = []
-for char in board:
-	if char != '.': 
-		if check(char) == True:
-			 empty.append(char)
-empty = list(set(empty))
-print(empty[0])
+summ = []
+#for letter in board:
+
+x_count = board.count('x')
+o_count = board.count('o')
+dot_count = board.count('.')
+if x_count + o_count + dot_count != 9 and abs(x_count - o_count) != 1:
+	for char in board:
+		if char != '.': 
+			if check(char) == True:
+				empty.append(char)
+	empty = list(set(empty))
+
+	print(empty[0])
+else:
+	print("invalid game")
+
+
+
