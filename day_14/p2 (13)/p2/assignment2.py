@@ -156,7 +156,7 @@ class PlaintextMessage():
         '''
         message encryption method 
         '''
-        return self.get_message_text_encrypted
+        return self.message_text_encrypted
     def change_shift(self, shift):
         '''
         to change the shift
