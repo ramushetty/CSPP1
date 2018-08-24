@@ -64,30 +64,28 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    _index_ = []
+    #_index_ = []
     s_i = {}
-    #print(_index_)
-    _cal_ = list(map(word_list, docs))
-   
-    #print(_cal_)
-    #print(_cal_)
-    stop_word = load_stopwords("stopwords.txt")
-    #print(stop_word)
-    for word in _cal_:
-        for  letter in word:
-            if letter not in stop_word:
-                _index_.append(letter) 
-    print(_index_)
-    #print(len(doc[0]))
-    #print(docs[0])
-    #for word in _index_:
-    #    for word 
-    # for word in _index_:
-    #     for i in range(0, len(docs)-1):
-    #         if word not in s_i[i]:
-    #             s_i[word] = [(i, docs.count(word))]
-    #         else:
-    #             s_i[i].append()
+    length = len(docs)
+    for i in range(length):
+        doc = word_list(docs[i])
+        for j in s_i:
+            word_count = doc.count(j)
+            if j in adict:
+                if (i, word_count) not in s_i[j]:
+                    s_i[j].append((i, word_count))
+            else:
+                s_i[j] = [(i, word_count)]
+
+    stop_words = load_stopwords('stopwords.txt')
+
+    for stop in stop_words:
+        if stop in s_i:
+            del s_i[stop_words]
+    return s_i
+
+
+
         
 
 
