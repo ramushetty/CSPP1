@@ -38,11 +38,11 @@ def  check(cha):
     if check_list(cha, 6, 4, 2):
         return True
 EMPTY = []
-X_count = BOARD.count('x');O_count = BOARD.count('o');Dot_count = BOARD.count('.')
+X_X = BOARD.count('x');O_O = BOARD.count('o');D_D = BOARD.count('.')
 C_C = 0
 S_S = 0
-if X_count + O_count + Dot_count == 9:
-    if abs(X_count - O_count) == 1:
+if X_X + O_O + D_D == 9:
+    if abs(X_X - O_O) == 1:
         for char in BOARD:
             if char != '.':
                 if check(char) == True:
