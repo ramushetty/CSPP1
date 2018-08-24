@@ -65,7 +65,7 @@ WORDLIST_FILENAME = 'words.txt'
 # Helper code End
 class Message:
     '''
-    class 
+    class
     '''
     def __init__(self, text):
         '''
