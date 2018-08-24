@@ -1,4 +1,7 @@
-board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+'''
+GAME TIC TAC TOE 
+'''
+BOARD = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 dublicate = []
 for loop in range(3):
     dublicate.append(list(map(str, input().split())))
@@ -11,7 +14,7 @@ def check_list(char, in1, in2, in3):
     '''
     checks the char in the given input
     '''
-    if board[in1] == char and board[in2] == char and board[in3] == char:
+    if BOARD[in1] == char and BOARD[in2] == char and BOARD[in3] == char:
         return True
     return False
 def  check(cha):
@@ -35,12 +38,12 @@ def  check(cha):
     if check_list(cha, 6, 4, 2):
         return True
 empty = []
-x_count = board.count('x');o_count = board.count('o');dot_count = board.count('.')
+x_count = BOARD.count('x');o_count = BOARD.count('o');dot_count = BOARD.count('.')
 c_c = 0
 s_s = 0
 if x_count + o_count + dot_count == 9:
     if abs(x_count - o_count) == 1:
-        for char in board:
+        for char in BOARD:
             if char != '.':
                 if check(char) == True:
                     s_s = 1
