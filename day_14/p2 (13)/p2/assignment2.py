@@ -154,7 +154,7 @@ class PlaintextMessage():
         return self.encrypting_dict
     def get_message_text_encrypted(self):
         '''
-        message encryption method 
+        message encryption method
         '''
         return self.message_text_encrypted
     def change_shift(self, shift):
