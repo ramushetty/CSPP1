@@ -52,8 +52,8 @@ def process_queries(search_index, queries):
         iterate through all the queries and call the search function
         print the results returned by search function
     '''
-    print(search_index)
-    print(queries)
+    #print(search_index)
+    #print(queries)
     for word in queries:
         search(search_index,word)
 
