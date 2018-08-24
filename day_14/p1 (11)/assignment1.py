@@ -84,7 +84,7 @@ class Message:
         '''
         build dictionary
         '''
-        load_keys = list(string.ascii_lowercase)
+        lower_keys = list(string.ascii_lowercase)
         lower_values = list(string.ascii_lowercase)
         shift_lower_values = lower_values[shift:] + lower_values[:shift]
         upper_keys = list(string.ascii_uppercase)
