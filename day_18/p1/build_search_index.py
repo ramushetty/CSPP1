@@ -77,14 +77,14 @@ def build_search_index(docs):
                     s_i[j].append((i, word_count))
             else:
                 s_i[j] = [(i, word_count)]
-    print(s_i)
+    #print(s_i)
 
     stop_words = load_stopwords('stopwords.txt')
 
     for word in stop_words:
         if word in s_i:
             del s_i[word]
-    print(s_i)
+    #print(s_i)
     return s_i
 
 # helper function to print the search index
