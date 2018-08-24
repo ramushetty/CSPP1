@@ -1,5 +1,5 @@
 '''
-GAME TIC TAC TOE 
+GAME TIC TAC TOE
 '''
 BOARD = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 DUPLICATE = []
@@ -10,11 +10,11 @@ for first in DUPLICATE:
     for element in first:
         BOARD[i] = element
         i += 1
-def check_list(char, in1, in2, in3):
+def check_list(chaa, in1, in2, in3):
     '''
     checks the char in the given input
     '''
-    if BOARD[in1] == char and BOARD[in2] == char and BOARD[in3] == char:
+    if BOARD[in1] == chaa and BOARD[in2] == chaa and BOARD[in3] == chaa:
         return True
     return False
 def  check(cha):
