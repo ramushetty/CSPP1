@@ -4,7 +4,7 @@ board = [0, 1, 2,
 dublicate = []
 for loop in range(3):	
 	dublicate.append(list(map(str, input().split())))
-print(dublicate)
+#print(dublicate)
 i = 0
 for first in dublicate:
 	for element in first:
