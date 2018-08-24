@@ -8,10 +8,16 @@ for first in dublicate:
         board[i] = element
         i += 1
 def check_list(char, in1, in2, in3):
+    '''
+    checks the char in the given input
+    '''
     if board[in1] == char and board[in2] == char and board[in3] == char:
         return True
     return False
 def  check(char):
+    '''
+    returns true or false for each char
+    '''
     if check_list(char, 0, 1, 2):
         return True
     if check_list(char, 0, 3, 6):
