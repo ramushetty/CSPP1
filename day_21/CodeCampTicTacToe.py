@@ -44,16 +44,22 @@ o_count = board.count('o')
 #print(o_count)
 dot_count = board.count('.')
 #print(dot_count)
-if x_count + o_count + dot_count == 9: #abs(x_count - o_count) != 1:
-	for char in board:
-		if char != '.': 
-			if check(char) == True:
-				empty.append(char)
-	empty = list(set(empty))
+c_c = 0
+if x_count + o_count + dot_count == 9:
+	if abs(x_count - o_count) == 1:
+		for char in board:
+			if char != '.': 
+				if check(char) == True:
+					empty.append(char)
+		empty = list(set(empty))
 
-	print(empty[0])
+		print(empty[0])
+	else:
+		c_c = 1
+		print("invalid game")
 else:
-	print("invalid input")
+	if c_c != 1:
+		print("invalid input")
 
 
 
