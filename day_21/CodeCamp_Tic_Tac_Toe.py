@@ -2,11 +2,11 @@
 GAME TIC TAC TOE 
 '''
 BOARD = [0, 1, 2, 3, 4, 5, 6, 7, 8]
-dublicate = []
+DUPLICATE = []
 for loop in range(3):
-    dublicate.append(list(map(str, input().split())))
+    DUPLICATE.append(list(map(str, input().split())))
 i = 0
-for first in dublicate:
+for first in DUPLICATE:
     for element in first:
         BOARD[i] = element
         i += 1
@@ -39,23 +39,23 @@ def  check(cha):
         return True
 empty = []
 x_count = BOARD.count('x');o_count = BOARD.count('o');dot_count = BOARD.count('.')
-c_c = 0
-s_s = 0
+C_C = 0
+S_S = 0
 if x_count + o_count + dot_count == 9:
     if abs(x_count - o_count) == 1:
         for char in BOARD:
             if char != '.':
                 if check(char) == True:
-                    s_s = 1
+                    S_S = 1
                     empty.append(char)
-        if s_s == 1:
+        if S_S == 1:
             empty = list(set(empty))
             print(empty[0])
         else:
             print("draw")
     else:
-        c_c = 1
+        C_C = 1
         print("invalid game")
 else:
-    if c_c != 1:
+    if C_C != 1:
         print("invalid input")
