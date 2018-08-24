@@ -45,6 +45,7 @@ def search(search_index, query):
             for index in range(len(dul[word])):
                 dul2.append(dul[word][index][0])
     dul2 = set(dul2)
+    print(dul2)
     return dul2
 def process_queries(search_index, queries):
     '''
