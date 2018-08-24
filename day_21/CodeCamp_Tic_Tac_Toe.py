@@ -35,7 +35,7 @@ s_s = 0
 if x_count + o_count + dot_count == 9:
     if abs(x_count - o_count) == 1:
         for char in board:
-            if char != '.': 
+            if char != '.':
                 if check(char) == True:
                     s_s = 1
                     empty.append(char)
