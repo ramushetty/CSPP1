@@ -44,11 +44,12 @@ O_O = BOARD.count('o')
 D_D = BOARD.count('.')
 C_C = 0
 S_S = 0
+EX_P = True
 if X_X + O_O + D_D == 9:
     if abs(X_X - O_O) == 1:
         for char in BOARD:
             if char != '.':
-                if check(char) == True:
+                if check(char) == EX_P:
                     S_S = 1
                     EMPTY.append(char)
         if S_S == 1:
