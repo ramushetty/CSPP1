@@ -14,25 +14,25 @@ def check_list(char, in1, in2, in3):
     if board[in1] == char and board[in2] == char and board[in3] == char:
         return True
     return False
-def  check(char):
+def  check(cha):
     '''
     returns true or false for each char
     '''
-    if check_list(char, 0, 1, 2):
+    if check_list(cha, 0, 1, 2):
         return True
-    if check_list(char, 0, 3, 6):
+    if check_list(cha, 0, 3, 6):
         return True
-    if check_list(char, 0, 4, 8):
+    if check_list(cha, 0, 4, 8):
         return True
-    if check_list(char, 3, 4, 5):
+    if check_list(cha, 3, 4, 5):
         return True
-    if check_list(char, 6, 7, 8):
+    if check_list(cha, 6, 7, 8):
         return True
-    if check_list(char, 1, 4, 7):
+    if check_list(cha, 1, 4, 7):
         return True
-    if check_list(char, 2, 5, 8):
+    if check_list(cha, 2, 5, 8):
         return True
-    if check_list(char, 6, 4, 2):
+    if check_list(cha, 6, 4, 2):
         return True
 empty = []
 x_count = board.count('x');o_count = board.count('o');dot_count = board.count('.')
