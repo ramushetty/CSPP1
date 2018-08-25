@@ -26,10 +26,6 @@ def tokenize(string):
             else:
                 dictt[j] = 1
     return dictt
-
-
-
-            ṇ
 def main():
     '''
     main
