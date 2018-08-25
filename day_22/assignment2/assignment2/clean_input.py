@@ -6,8 +6,8 @@ import re
 def clean_string(string):
     inputt = string
     #print(inputt)
-    out = re.sub('[^a-z]', '', inputt)
-    out = re.sub('[0-9]', '', out)
+    out = re.sub('[^a-z0-9]', '', inputt)
+    #out = re.sub('[0-9]', '', out)
     return out
 
 def main():
