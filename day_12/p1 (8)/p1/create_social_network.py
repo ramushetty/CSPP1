@@ -35,24 +35,21 @@ def create_social_network(data):
     # remove the pass below and start writing your code
 def create_social_network(string):
     dic_ = {}
-    print(dic_)
+    #print(dic_)
     code = string.split()
-    print(code)
-    for char in code:
-        if char not in dic_:
-            dic_.append(char)
-    print(dic_)
-
-
-
-
-        
-    
-
-    return 0
-
-    
-
+    #print(code)
+    flag = 1
+    for word in code: 
+    	if word == 'follows':
+    		flag = 0
+    if flag == 1: 
+    	return dic_
+    data = data.split('\n')
+    for i in range(len(data)-1):
+    	key, value = data[i].split('follows')
+    	value = value.split(',')
+    	dic_[key] = value
+    return dic_
 def main():
     '''
         handling testcase input and printing output
