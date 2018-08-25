@@ -2,7 +2,7 @@
     Assignment-1 Create Social Network
 '''
 
-def create_social_network(data):
+#def create_social_network(data):
     '''
         The data argument passed to the function is a string
         It represents simple social network data
@@ -34,15 +34,18 @@ def create_social_network(data):
 
     # remove the pass below and start writing your code
 def create_social_network(string):
+    '''
+    social network
+    '''
     dic_ = {}
     #print(dic_)
     code = string.split()
     #print(code)
     flag = 1
-    for word in code: 
+    for word in code:
         if word == 'follows':
             flag = 0
-    if flag == 1: 
+    if flag == 1:
         return dic_
     string = string.split('\n')
     for i in range(len(string)-1):
