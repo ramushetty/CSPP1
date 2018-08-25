@@ -19,8 +19,8 @@ def check_sudoku(sudoku):
         if i != 9:
             return False
     mat1 = sudoku
-    x = len(sudoku)
-    for i in range(x):
+    x_x = len(sudoku)
+    for i in range(x_x):
         for j in range(len(mat1[i])):
             if i == m:
                 if mat1[i][j] == mat1[i][j]:
@@ -41,12 +41,10 @@ def main():
     '''
         main function to read input sudoku from console
         call check_sudoku function and print the result to console
-    '''
-    
+    '''  
     # initialize empty list
     sudoku = []
-
-    # loop to read 9 lines of input from console
+   # loop to read 9 lines of input from console
     for i in range(9):
         # read a line, split it on SPACE and append row to list
         row = input().split(' ')
