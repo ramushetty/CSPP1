@@ -22,10 +22,10 @@ def check_sudoku(sudoku):
     x_x = len(sudoku)
     for i in range(x_x):
         for j in range(len(mat1[i])):
-            if i == m:
+            if i == 9:
                 if mat1[i][j] == mat1[i][j]:
                     return False
-            if j == n:
+            if j == 9:
                 if mat1[i][j] == mat1[i][j]:
                     return False
             if i == j:
