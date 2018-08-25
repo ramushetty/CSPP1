@@ -8,13 +8,31 @@
     satisfies all the sudoku rules given in the statement above.
 '''
 
+
 def check_sudoku(sudoku):
     '''
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    print(sudoku)
-    
+    #print(sudoku)
+    for i in sudoku:
+        if i != 9:
+            return False
+    mat1 = sudoku
+    x = len(sudoku)
+    for i in range(x):
+        for j in range(len(mat1[i])):
+            if i == m:
+                if mat1[i][j] == mat1[i][j]:
+                    return False
+            if j == n:
+                if mat1[i][j] == mat1[i][j]:
+                    return False
+
+            if m == n:
+                if i == j:
+                    if mat1[i][j] == mat[i][j]:
+                        return False
 def main():
     '''
         main function to read input sudoku from console
