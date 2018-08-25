@@ -9,10 +9,10 @@ def print_dictionary(dictionary):
     print output with key and values
     '''
     out = dictionary
-    lenn = len(dictionary)
+    #lenn = len(dictionary)
     for key in sorted(out):
         #print(key)
-        print("%s - %s" % (key,out[key]))
+        print("%s - %s" % (key, out[key]))
 
 def main():
     '''
