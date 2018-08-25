@@ -46,7 +46,7 @@ def create_social_network(string):
     	return dic_
     string = string.split('\n')
     for i in range(len(string)-1):
-    	key, value = string[i].split('follows')
+    	key, value = string[i].split(' follows ')
     	value = value.split(',')
     	dic_[key] = value
     return dic_
