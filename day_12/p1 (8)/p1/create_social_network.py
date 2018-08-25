@@ -1,9 +1,10 @@
 '''
     Assignment-1 Create Social Network
 '''
+'''
 
-#def create_social_network(data):
-    '''
+            def create_social_network(data):
+    
         The data argument passed to the function is a string
         It represents simple social network data
         In this social network data there are people following other people
