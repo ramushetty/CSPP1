@@ -41,7 +41,7 @@ def main():
     '''
         main function to read input sudoku from console
         call check_sudoku function and print the result to console
-    '''  
+    '''
     # initialize empty list
     sudoku = []
    # loop to read 9 lines of input from console
