@@ -40,15 +40,15 @@ def create_social_network(string):
     #print(code)
     flag = 1
     for word in code: 
-    	if word == 'follows':
-    		flag = 0
+        if word == 'follows':
+            flag = 0
     if flag == 1: 
-    	return dic_
+        return dic_
     string = string.split('\n')
     for i in range(len(string)-1):
-    	key, value = string[i].split(' follows ')
-    	value = value.split(',')
-    	dic_[key] = value
+        key, value = string[i].split(' follows ')
+        value = value.split(',')
+        dic_[key] = value
     return dic_
 def main():
     '''
