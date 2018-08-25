@@ -29,7 +29,7 @@ def check_sudoku(sudoku):
                 if mat1[i][j] == mat1[i][j]:
                     return False
             if i == j:
-                if mat1[i][j] == mat[i][j]:
+                if mat1[i][j] == mat1[i][j]:
                     return False
             if i+j == i + j:
                 if mat1[i][j] == mat1[i][j]:
