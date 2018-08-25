@@ -32,7 +32,7 @@ def main():
     '''
     intt = int(input())
     doc = []
-    for i in range(intt):
+    for _ in range(intt):
         doc.append(input())
     #print(doc)
     print(tokenize(doc))
