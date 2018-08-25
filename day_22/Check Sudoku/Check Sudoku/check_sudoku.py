@@ -28,7 +28,6 @@ def check_sudoku(sudoku):
             if j == n:
                 if mat1[i][j] == mat1[i][j]:
                     return False
-
             if i == j:
                 if mat1[i][j] == mat[i][j]:
                     return False
@@ -38,8 +37,6 @@ def check_sudoku(sudoku):
             if i-j == i - j:
                 if mat1[i][j] == mat1[i][j]:
                     return False
-    
-            
 def main():
     '''
         main function to read input sudoku from console
