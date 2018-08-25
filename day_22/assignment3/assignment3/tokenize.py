@@ -4,40 +4,40 @@ each word
 '''
 import re
 def clean_index(index):
-	'''
-	to remove special characters
-	'''
-	listt1 = index
-	out = re.sub(r'[^a-zA-z]', ' ', listt1).split()
-	return out
+    '''
+    to remove special characters
+    '''
+    listt1 = index
+    out = re.sub(r'[^a-zA-z]', ' ', listt1).split()
+    return out
 
 def tokenize(string):
-	'''
-	token size
-	'''
-	listt = string
-	dictt = {}
-	for index in listt:
-		#print(index)
-		clean = clean_index(index)
-		for j in clean:
-			if j in dictt:
-				dictt[j] += 1
-			else:
-				dictt[j] = 1
-	return dictt
+    '''
+    token size
+    '''
+    listt = string
+    dictt = {}
+    for index in listt:
+        #print(index)
+        clean = clean_index(index)
+        for j in clean:
+            if j in dictt:
+                dictt[j] += 1
+            else:
+                dictt[j] = 1
+    return dictt
 
 
 
-            
+            ṇ
 def main():
-	'''
-	main
-	'''
+    '''
+    main
+    '''
     intt = int(input())
     doc = []
     for i in range(intt):
-    	doc.append(input())
+        doc.append(input())
     #print(doc)
     print(tokenize(doc))
 if __name__ == '__main__':
