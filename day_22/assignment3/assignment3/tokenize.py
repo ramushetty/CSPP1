@@ -8,7 +8,7 @@ def clean_index(index):
     to remove special characters
     '''
     listt1 = index
-    out = re.sub(r'[^a-zA-z]', ' ', listt1).split()
+    out = re.sub(r'[^a-zA-z0-9]', ' ', listt1).split()
     return out
 
 def tokenize(string):
