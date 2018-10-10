@@ -15,16 +15,16 @@ def check_sudoku(sudoku):
         The function has to return True for a valid sudoku grid and false otherwise
     '''
     #print(sudoku)
-    c = 0
+    c_c = 0
     for row in sudoku:
         if len(set(row)) == 9 and int(max(row))-int(min(row)) == 8:
-            c += 1
+            c_c += 1
     for out in range(0, 9):
         mat1 = []
         for inside in range(0, 9):
             mat1.append(sudoku[inside][out])
         if len(set(mat1)) == 9 and int(max(mat1))-int(min(mat1)) == 8:
-            c += 1
+            c_c += 1
     for _ in range(0, 9):
         mat1 = []
         mat2 = []
@@ -51,12 +51,12 @@ def check_sudoku(sudoku):
             for inside in range(4, 9):
                 mat3.append(sudoku[out][inside])
         if len(set(mat1)) == 9 and int(max(mat1))-int(min(mat1)) == 8:
-            c += 1
+            c_c += 1
         if len(set(mat2)) == 9 and int(max(mat2))-int(min(mat2)) == 8:
-            c += 1
+            c_c += 1
         if len(set(mat3)) == 9 and int(max(mat3))-int(min(mat3)) == 8:
-            c += 1
-    if c == 45:
+            c_c += 1
+    if c_c == 45:
         return True
     return False
 def main():
